@@ -5,10 +5,10 @@ import { categoryLabels, projects, ProjectCategory } from '../data/projects'
 
 const filters: { label: string; value: ProjectCategory | 'all' }[] = [
   { label: 'All Projects', value: 'all' },
-  { label: categoryLabels.engineering, value: 'engineering' },
   { label: categoryLabels.powerbi, value: 'powerbi' },
   { label: categoryLabels['case-study'], value: 'case-study' },
   { label: categoryLabels.automation, value: 'automation' },
+  { label: categoryLabels.engineering, value: 'engineering' },
 ]
 
 export default function Work() {

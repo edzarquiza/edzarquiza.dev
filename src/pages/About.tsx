@@ -57,6 +57,13 @@ export default function About() {
               </p>
             </div>
             <div>
+              <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Availability</p>
+              <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
+                Currently open to opportunities in Power BI, Data Analytics, BI Development, Automation, and
+                related technology roles.
+              </p>
+            </div>
+            <div>
               <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Working Philosophy</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
                 Understand the business problem before touching a tool. Validate the data before trusting it.

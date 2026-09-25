@@ -136,8 +136,9 @@ export default function FlowOps() {
         backLabel="Back to Projects"
       >
         <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-white/60">
-          A multi-tenant IT service-desk platform built around a deterministic, explainable Attention engine —
-          tested across four layers and deployed as a real ASP.NET Core modular monolith.
+          Service-desk teams don&rsquo;t struggle to see their tickets &mdash; they struggle to see which ones
+          need a decision right now. FlowOps is a deployed, tested operations platform built to answer exactly
+          that, with a deterministic Attention engine that shows the evidence behind every at-risk ticket.
         </p>
       </PageHeader>
 

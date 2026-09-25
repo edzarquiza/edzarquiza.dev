@@ -51,9 +51,9 @@ export default function AureliaAI() {
         backLabel="Back to Projects"
       >
         <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-white/60">
-          A portfolio invoice control system combining PDF extraction, AI field extraction, deterministic
-          validation, duplicate detection, and automation auditing — built to demonstrate one architectural
-          principle: the language model never makes a pass/fail call.
+          Letting an AI model both read an invoice and decide whether it&rsquo;s valid means inheriting its
+          uncertainty into a business decision. Aurelia AI keeps those jobs separate: AI only extracts the data,
+          and a deterministic backend, checked against real vendor and PO records, decides whether it passes.
         </p>
       </PageHeader>
 
