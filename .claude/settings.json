@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 5173 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { Stop-Process -Id $conn.OwningProcess -Force; \"killed PID $\\($conn.OwningProcess\\)\" } else { \"no listener on 5173\" })",
+      "WebFetch(domain:jgthms.com)",
+      "WebFetch(domain:riccardozanutta.com)",
+      "Read(//tmp/**)",
+      "PowerShell(Get-Command python, python3, py -ErrorAction SilentlyContinue)"
+    ]
+  }
+}
