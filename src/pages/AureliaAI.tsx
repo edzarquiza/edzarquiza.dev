@@ -39,7 +39,8 @@ function Eyebrow({ children }: { children: string }) {
 
 export default function AureliaAI() {
   const project = projects.find((p) => p.slug === 'aurelia-ai')!
-  const [controlCenter, attentionCenter, processingBreakdown, operationsPage, workflowDiagram] = project.dashboardImages ?? []
+  const [controlCenter, attentionCenter, processingBreakdown, operationsPage, workflowDiagram, operationsWorkflow] =
+    project.dashboardImages ?? []
 
   return (
     <>
@@ -133,17 +134,16 @@ export default function AureliaAI() {
           </dl>
         </section>
 
-        {/* THE OPERATIONS VIEW */}
+        {/* ATTENTION CENTER */}
         <section className="mt-16">
-          <Eyebrow>Attention & Operations</Eyebrow>
+          <Eyebrow>Attention Center</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             Failures are surfaced, not swallowed.
           </h2>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             The Invoice Control Center is organized around three areas: invoice processing, an Attention Center
             for failed, incomplete, and orphaned automation runs, and KPI/performance metrics across invoices and
-            automation. A separate, simpler Operations page, the project&rsquo;s original scope, coexists in the
-            same app.
+            automation.
           </p>
 
           <div className="mt-8 space-y-12">
@@ -163,11 +163,47 @@ export default function AureliaAI() {
                 </div>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* THE OPERATIONS PAGE */}
+        <section className="mt-16">
+          <Eyebrow>Before Invoice Control</Eyebrow>
+          <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
+            A simpler feature came first: free-text requests, routed by AI.
+          </h2>
+          <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
+            Before the Invoice Control Center existed, this was the whole product. A user types a plain-language
+            operational request into a single field &mdash; &ldquo;I cannot connect to the company VPN&rdquo; is
+            the kind of thing it&rsquo;s built for &mdash; and the frontend posts that text to an n8n webhook.
+            Everything past that point happens in n8n: AI classifies the request, deterministic logic calculates
+            its priority and SLA, a confidence check decides whether it&rsquo;s routed straight through or escalated
+            to human review, and a knowledge-base lookup attaches guidance where one is found. The frontend&rsquo;s
+            job is just to render whatever comes back &mdash; category, routing department, priority, SLA,
+            processing mode, and any knowledge-base guidance &mdash; exactly as n8n returns it, never recomputing
+            any of it itself.
+          </p>
+          <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
+            The workflow&rsquo;s internal name, <span className="font-mono text-xs text-teal-text">OpsFlow AI &mdash; Request Intake</span>,
+            is a holdover from before the product was rebranded to Aurelia AI. Its logic is considered stable and
+            isn&rsquo;t being actively extended, but it still runs as a separate, self-contained feature inside
+            the same app and brand shell as the Invoice Control Center.
+          </p>
+
+          <div className="mt-8 space-y-12">
             {operationsPage && (
               <div>
                 <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{operationsPage.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={operationsPage.src} alt={operationsPage.label} className="w-full" />
+                </div>
+              </div>
+            )}
+            {operationsWorkflow && (
+              <div>
+                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{operationsWorkflow.label}</p>
+                <div className="overflow-hidden border border-border">
+                  <img src={operationsWorkflow.src} alt={operationsWorkflow.label} className="w-full" />
                 </div>
               </div>
             )}

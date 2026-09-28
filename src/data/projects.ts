@@ -24,6 +24,7 @@ import aureliaAttentionCenter from '../assets/aurelia-attention-center.png'
 import aureliaProcessingBreakdown from '../assets/aurelia-processing-breakdown.png'
 import aureliaOperationsPage from '../assets/aurelia-operations-page.png'
 import aureliaInvoiceControlWorkflow from '../assets/aurelia-invoice-control-workflow.png'
+import aureliaOperationsWorkflow from '../assets/aurelia-operations-workflow.png'
 
 const ecommerceSlideModules = import.meta.glob('../assets/presentations/ecommerce/*.png', {
   eager: true,
@@ -547,8 +548,9 @@ export const projects: Project[] = [
       { label: 'Invoice Control Center — KPI strip & Process Invoice panel', src: aureliaInvoiceControlCenter },
       { label: 'Attention Center — failed, incomplete, and orphaned automation runs', src: aureliaAttentionCenter },
       { label: 'Processing Breakdown & Automation Runs', src: aureliaProcessingBreakdown },
-      { label: 'Operations page', src: aureliaOperationsPage },
+      { label: 'Operations page — free-text request intake', src: aureliaOperationsPage },
       { label: 'n8n workflow — invoice-control automation', src: aureliaInvoiceControlWorkflow },
+      { label: 'n8n workflow — OpsFlow AI request intake (Operations)', src: aureliaOperationsWorkflow },
     ],
     artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/aurelia-ai' }],
   },
