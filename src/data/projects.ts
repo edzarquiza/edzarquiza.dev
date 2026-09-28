@@ -529,7 +529,7 @@ export const projects: Project[] = [
     oneLiner:
       "Letting an AI model both read an invoice and decide if it's valid means inheriting its uncertainty into a business decision. Built Aurelia AI, where AI only extracts the data — a deterministic backend, checked against real vendor and PO records, makes every pass/fail call.",
     tools: ['React', 'TypeScript', 'n8n', 'Ollama (Qwen 3 4B)', 'PostgreSQL'],
-    heroImage: aureliaInvoiceControlCenter,
+    heroImage: aureliaInvoiceControlWorkflow,
     keyResults: [
       { value: '8', label: 'Tested Workflow Paths' },
       { value: '3', label: 'Webhook Endpoints' },

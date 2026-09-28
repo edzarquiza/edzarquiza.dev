@@ -1,6 +1,7 @@
 import Button from './Button'
 import CareerMark from './CareerMark'
-import CareerEvidence from './CareerEvidence'
+import CareerEvidence, { stats } from './CareerEvidence'
+import StatStrip from './StatStrip'
 import { siteConfig } from '../data/site'
 
 export default function Hero() {
@@ -8,7 +9,7 @@ export default function Hero() {
     <section className="bg-charcoal">
       <div className="mx-auto max-w-content px-6 pb-12 pt-20 sm:pb-16 sm:pt-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl animate-fade-up">
             <p className="font-mono text-sm font-semibold uppercase tracking-[0.15em] text-teal">
               Data / BI &middot; Automation &middot; Software Engineering
             </p>
@@ -37,7 +38,7 @@ export default function Hero() {
               href={siteConfig.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-teal hover:text-white"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-teal transition-colors hover:text-white"
             >
               <span className="flex h-6 w-6 items-center justify-center rounded bg-teal/15 text-teal">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -46,9 +47,14 @@ export default function Hero() {
               </span>
               Connect on LinkedIn
             </a>
+
+            {/* Compact credibility strip — mobile/tablet only, desktop shows the fuller CareerEvidence panel instead */}
+            <div className="mt-8 lg:hidden">
+              <StatStrip stats={stats} invert />
+            </div>
           </div>
 
-          <div className="hidden flex-col items-center lg:flex lg:-translate-y-10 lg:justify-self-stretch">
+          <div className="hidden flex-col items-center lg:flex lg:-translate-y-10 lg:justify-self-stretch animate-fade-up [animation-delay:150ms]">
             <CareerMark />
             <div className="mt-10 w-full max-w-[300px]">
               <CareerEvidence />

@@ -1,4 +1,4 @@
-const stats = [
+export const stats = [
   { value: '11', label: 'Years in Technology' },
   { value: '50+', label: 'Automation Solutions' },
   { value: '70+', label: 'VBA & .NET Applications' },

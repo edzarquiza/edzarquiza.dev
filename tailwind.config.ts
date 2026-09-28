@@ -21,10 +21,10 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Poppins"', 'sans-serif'],
-        sans: ['"Poppins"', 'sans-serif'],
-        serif: ['"Poppins"', 'sans-serif'],
-        mono: ['"Montserrat"', 'sans-serif'],
+        display: ['"IBM Plex Sans"', 'sans-serif'],
+        sans: ['"IBM Plex Sans"', 'sans-serif'],
+        serif: ['"IBM Plex Serif"', 'serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       maxWidth: {
         content: '1200px',

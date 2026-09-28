@@ -16,7 +16,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <img
             src={project.heroImage}
             alt={`${project.title} dashboard preview`}
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03]"
           />
         </div>
       )}
@@ -33,7 +33,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <p className="mt-6 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">
         {categoryLabels[project.category]}
       </p>
-      <h3 className="mt-2 min-h-[4rem] font-display text-2xl font-bold text-charcoal">{project.title}</h3>
+      <h3 className="mt-2 min-h-[4rem] font-display text-2xl font-bold text-charcoal transition-colors group-hover:text-teal-text">{project.title}</h3>
       <p className="mt-3 font-serif text-sm leading-relaxed text-text-secondary">{project.oneLiner}</p>
 
       {project.tools.length > 0 && (
@@ -65,8 +65,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   )
 
   const className =
-    'group flex flex-col border border-border bg-white p-8 transition-colors transition-shadow' +
-    (isComingSoon ? ' opacity-80' : ' hover:border-teal/50 hover:shadow-sm')
+    'group flex flex-col border border-border bg-white p-8 transition-all duration-200 ease-out' +
+    (isComingSoon ? ' opacity-80' : ' hover:-translate-y-1 hover:border-teal/50 hover:shadow-md')
 
   if (isComingSoon) {
     return <div className={className}>{content}</div>

@@ -1,5 +1,7 @@
 import PageHeader from '../components/PageHeader'
 import Button from '../components/Button'
+import StatStrip from '../components/StatStrip'
+import Reveal from '../components/Reveal'
 import { projects, categoryLabels } from '../data/projects'
 
 const pipelineFlow = [
@@ -80,6 +82,12 @@ export default function AureliaAI() {
           </div>
         )}
 
+        {project.keyResults && (
+          <div className="mt-8">
+            <StatStrip stats={project.keyResults} />
+          </div>
+        )}
+
         {/* THE PROBLEM */}
         <section className="mt-16 max-w-2xl">
           <Eyebrow>The Problem</Eyebrow>
@@ -135,6 +143,7 @@ export default function AureliaAI() {
         </section>
 
         {/* ATTENTION CENTER */}
+        <Reveal>
         <section className="mt-16">
           <Eyebrow>Attention Center</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
@@ -165,8 +174,10 @@ export default function AureliaAI() {
             )}
           </div>
         </section>
+        </Reveal>
 
         {/* THE OPERATIONS PAGE */}
+        <Reveal>
         <section className="mt-16">
           <Eyebrow>Before Invoice Control</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
@@ -209,6 +220,7 @@ export default function AureliaAI() {
             )}
           </div>
         </section>
+        </Reveal>
 
         {/* UNDER THE HOOD */}
         <section className="mt-16">

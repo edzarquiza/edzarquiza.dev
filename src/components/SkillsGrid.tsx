@@ -1,22 +1,26 @@
 import { skillCategories, SkillTier } from '../data/skills'
 
-const tierStyles: Record<SkillTier, { label: string; item: string; gap: string }> = {
+const tierStyles: Record<SkillTier, { wrapper: string; label: string; item: string; gap: string }> = {
   primary: {
-    label: 'text-base font-extrabold text-charcoal',
+    wrapper: 'border border-border border-t-2 border-t-teal bg-surface p-5',
+    label: 'text-base font-bold text-charcoal',
     item: 'text-sm text-charcoal/80',
     gap: 'mt-4 space-y-2',
   },
   secondary: {
+    wrapper: 'border border-border bg-surface p-5',
     label: 'text-sm font-bold text-charcoal',
     item: 'text-sm text-text-secondary',
     gap: 'mt-3 space-y-2',
   },
   supporting: {
+    wrapper: 'border border-border p-5',
     label: 'text-sm font-semibold text-charcoal',
     item: 'text-xs text-text-secondary',
     gap: 'mt-3 space-y-1.5',
   },
   compact: {
+    wrapper: 'p-1',
     label: 'text-xs font-semibold uppercase tracking-[0.12em] text-text-secondary',
     item: 'text-xs text-text-secondary/80',
     gap: 'mt-2',
@@ -25,11 +29,11 @@ const tierStyles: Record<SkillTier, { label: string; item: string; gap: string }
 
 export default function SkillsGrid() {
   return (
-    <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2">
+    <div className="grid gap-5 sm:grid-cols-2">
       {skillCategories.map((category) => {
         const style = tierStyles[category.tier]
         return (
-          <div key={category.label}>
+          <div key={category.label} className={style.wrapper}>
             <p className={style.label}>{category.label}</p>
 
             {category.tier === 'compact' ? (

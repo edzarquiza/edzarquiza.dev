@@ -1,5 +1,7 @@
 import PageHeader from '../components/PageHeader'
 import Button from '../components/Button'
+import StatStrip from '../components/StatStrip'
+import Reveal from '../components/Reveal'
 import { projects, categoryLabels } from '../data/projects'
 
 const glance = [
@@ -7,7 +9,6 @@ const glance = [
   { label: 'Role', value: 'Solo designer & developer' },
   { label: 'Stack', value: '.NET 10 · ASP.NET Core · PostgreSQL · EF Core' },
   { label: 'Architecture', value: 'Modular monolith, 4 layers' },
-  { label: 'Testing', value: '1,373 automated tests, 4 layers' },
   { label: 'Deployment', value: 'Docker on Render, Neon PostgreSQL' },
   { label: 'Key capability', value: 'Deterministic, explainable Attention engine' },
 ]
@@ -157,27 +158,37 @@ export default function FlowOps() {
           </div>
         )}
 
+        {project.keyResults && (
+          <div className="mt-8">
+            <StatStrip stats={project.keyResults} />
+          </div>
+        )}
+
         {/* AT A GLANCE */}
-        <section className="mt-16">
-          <Eyebrow>FlowOps at a Glance</Eyebrow>
-          <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {glance.map((item) => (
-              <div key={item.label} className="border border-border bg-surface p-4">
-                <dt className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{item.label}</dt>
-                <dd className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+        <Reveal>
+          <section className="mt-16">
+            <Eyebrow>FlowOps at a Glance</Eyebrow>
+            <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {glance.map((item) => (
+                <div key={item.label} className="border border-border bg-surface p-4">
+                  <dt className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{item.label}</dt>
+                  <dd className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        </Reveal>
 
         {/* THE PROBLEM */}
-        <section className="mt-16 max-w-2xl">
-          <Eyebrow>The Problem</Eyebrow>
-          <h2 className="mt-3 font-display text-xl font-bold text-charcoal">
-            A full queue doesn&rsquo;t tell you what needs a decision now.
-          </h2>
-          <p className="mt-4 font-serif text-sm leading-relaxed text-charcoal/80">{project.businessProblem}</p>
-        </section>
+        <Reveal>
+          <section className="mt-16 max-w-2xl">
+            <Eyebrow>The Problem</Eyebrow>
+            <h2 className="mt-3 font-display text-xl font-bold text-charcoal">
+              A full queue doesn&rsquo;t tell you what needs a decision now.
+            </h2>
+            <p className="mt-4 font-serif text-sm leading-relaxed text-charcoal/80">{project.businessProblem}</p>
+          </section>
+        </Reveal>
 
         {/* THE IDEA */}
         <section className="mt-16 max-w-2xl">
@@ -189,6 +200,7 @@ export default function FlowOps() {
         </section>
 
         {/* THE DIFFERENTIATOR — ATTENTION */}
+        <Reveal>
         <section className="mt-16">
           <Eyebrow>The Differentiator</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
@@ -217,6 +229,7 @@ export default function FlowOps() {
             ))}
           </ul>
         </section>
+        </Reveal>
 
         {/* THE ENGINEERING BEHIND ATTENTION */}
         <section className="mt-16 max-w-2xl">
@@ -243,6 +256,7 @@ export default function FlowOps() {
         </section>
 
         {/* MAKING IT A REAL PRODUCT */}
+        <Reveal>
         <section className="mt-16">
           <Eyebrow>Making It a Real Product</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
@@ -285,6 +299,7 @@ export default function FlowOps() {
             )}
           </div>
         </section>
+        </Reveal>
 
         {/* ARCHITECTURE */}
         <section className="mt-16 max-w-2xl">
@@ -356,6 +371,7 @@ export default function FlowOps() {
         </section>
 
         {/* TESTING */}
+        <Reveal>
         <section className="mt-16">
           <Eyebrow>Testing & Proof</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
@@ -383,6 +399,7 @@ export default function FlowOps() {
             </table>
           </div>
         </section>
+        </Reveal>
 
         {/* DEPLOYMENT */}
         <section className="mt-16 max-w-2xl">
