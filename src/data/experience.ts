@@ -32,11 +32,12 @@ export const experience: ExperienceEntry[] = [
     end: '01/2026',
     type: 'Full time',
     highlights: [
-      'Built an automated Jira-to-Power BI reporting pipeline: Python extraction into a governed dataset, feeding an auto-refreshing report delivered to leadership on a set cadence, with an AI-generated weekly sprint summary',
-      'Designed and delivered approximately 10 Power BI reports covering automation performance, finance forecasting, Jira team KPIs, and workload distribution, used directly in capacity allocation and finance decisions',
-      'Led a 3-person RPA team through the full delivery lifecycle: requirements, development, QA/QC, documentation, deployment, and production support',
-      'Introduced structured QA/QC and test practices that improved release quality and automation uptime',
-      'Mentored engineers through 1:1s, performance support, and career development while managing stakeholder timelines',
+      'Built an automated Jira-to-Power BI data pipeline in Python — extracting operational data on a scheduled basis, transforming it into a governed reporting dataset, and feeding an auto-refreshing Power BI reporting layer',
+      'Designed data models and reporting solutions covering automation performance, finance forecasting, Jira team KPIs, workload distribution, and capacity planning',
+      'Developed approximately 10 Power BI reports used by leadership to monitor operational performance, workload, and financial planning',
+      'Led a 3-person engineering team through the full delivery lifecycle: requirements, development, QA/QC, documentation, deployment, and production support',
+      'Worked directly with Australian stakeholders in a distributed remote environment, translating business requirements into technical solutions and decision-support reporting',
+      'Mentored engineers through technical guidance, 1:1s, performance support, and delivery planning',
     ],
   },
   {
@@ -62,10 +63,11 @@ export const experience: ExperienceEntry[] = [
     end: '08/2022',
     type: 'Full time',
     highlights: [
-      'Developed and maintained 70+ VBA macros and .NET/C# enterprise applications, supporting manufacturing operations for 500 users across 10 departments',
-      'Designed and optimized SQL Server databases, views, stored procedures, T-SQL, and user-defined functions, including query tuning on high-volume production tables',
-      'Gathered requirements from operations stakeholders and translated them into delivered software, owning the full lifecycle through deployment and support',
-      'Reviewed code for performance and reusability, diagnosed and resolved production defects, and produced technical specifications and end-user training materials',
+      'Developed and maintained 70+ VBA macros and enterprise applications in C#, VB.NET, VBA, SQL Server, and T-SQL, supporting manufacturing operations for 500 users across 10 departments',
+      'Designed and optimized SQL Server databases, views, stored procedures, and user-defined functions, including query tuning against high-volume production tables',
+      'Built data models and database structures supporting operational applications and downstream reporting',
+      'Translated operational requirements into data-driven software solutions, owning delivery from requirements analysis through deployment and production support',
+      'Diagnosed production data and application issues, improving system reliability and resolving performance bottlenecks, and produced technical specifications and end-user training materials',
     ],
   },
   {
