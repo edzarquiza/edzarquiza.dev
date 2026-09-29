@@ -189,7 +189,7 @@ export const projects: Project[] = [
     category: 'automation',
     status: 'published',
     oneLiner:
-      "Power BI is the last of eight stages data passes through here, not the whole project. Built a Microsoft Fabric data platform around FlowOps' real operational data: an orchestrated ingestion pipeline, a Bronze/Silver/Gold lakehouse and warehouse, automated data-quality validation, and a Direct Lake semantic model, with a three-page Power BI report as the final consumption layer, not the engineering story itself.",
+      'An end-to-end Microsoft Fabric data platform built around FlowOps’ real operational data, connecting orchestrated PostgreSQL ingestion, automated data-quality validation, Bronze/Silver processing, Gold Warehousing, and Direct Lake semantic modeling into a single analytical pipeline, with Power BI as the final consumption layer.',
     tools: ['Microsoft Fabric', 'Fabric Data Factory', 'PySpark', 'Fabric Warehouse', 'Direct Lake', 'Power BI', 'DAX', 'PostgreSQL'],
     heroImage: flowOpsFabricArchitecture,
     heroImageAlt: 'FlowOps Service Operations Analytics Platform architecture diagram: source through consumption',
