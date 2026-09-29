@@ -13,6 +13,7 @@ export const skillCategories: SkillCategory[] = [
     tier: 'primary',
     items: [
       'Power BI',
+      'Tableau',
       'DAX',
       'Power Query',
       'Data Modeling',
@@ -20,12 +21,9 @@ export const skillCategories: SkillCategory[] = [
       'Date Tables',
       'Row-Level Security',
       'Scheduled Refresh',
-      'KPI Reporting',
-      'Data Visualization',
       'Microsoft Fabric',
       'Direct Lake',
     ],
-    secondaryItems: ['Tableau'],
   },
   {
     label: 'Data & Databases',
@@ -38,7 +36,6 @@ export const skillCategories: SkillCategory[] = [
       'MySQL',
       'SSMS',
       'Stored Procedures & Views',
-      'User-Defined Functions',
       'SSIS',
       'ETL / Data Pipelines',
       'PySpark',
@@ -51,10 +48,10 @@ export const skillCategories: SkillCategory[] = [
     items: [
       'UiPath',
       'Power Automate',
+      'n8n',
       'VBA Macros',
       'Excel (Advanced)',
       'Process Automation',
-      'Process Optimization',
       'Production Support',
     ],
   },
@@ -75,11 +72,6 @@ export const skillCategories: SkillCategory[] = [
       'Render',
       'DigitalOcean',
     ],
-  },
-  {
-    label: 'AI & Intelligent Automation',
-    tier: 'compact',
-    items: ['n8n', 'AI-Assisted Development'],
   },
   {
     label: 'Delivery & Leadership',
