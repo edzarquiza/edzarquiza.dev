@@ -148,6 +148,7 @@ export type Project = {
   oneLiner: string
   tools: string[]
   heroImage?: string
+  heroImageAlt?: string
   keyResults?: { value: string; label: string }[]
   keyFinding?: string
   businessProblem?: string
@@ -182,6 +183,78 @@ export const categoryLabels: Record<ProjectCategory, string> = {
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'flowops-fabric',
+    title: 'FlowOps Service Operations Analytics Platform',
+    category: 'automation',
+    status: 'published',
+    oneLiner:
+      "Power BI is the last of eight stages data passes through here, not the whole project. Built a Microsoft Fabric data platform around FlowOps' real operational data: an orchestrated ingestion pipeline, a Bronze/Silver/Gold lakehouse and warehouse, automated data-quality validation, and a Direct Lake semantic model, with a three-page Power BI report as the final consumption layer, not the engineering story itself.",
+    tools: ['Microsoft Fabric', 'Fabric Data Factory', 'PySpark', 'Fabric Warehouse', 'Direct Lake', 'Power BI', 'DAX', 'PostgreSQL'],
+    heroImage: flowOpsFabricArchitecture,
+    heroImageAlt: 'FlowOps Service Operations Analytics Platform architecture diagram: source through consumption',
+    keyResults: [
+      { value: '19', label: 'Automated Data Quality Checks' },
+      { value: '4', label: 'Orchestrated Pipeline Stages' },
+      { value: 'Bronze / Silver / Gold', label: 'Lakehouse Architecture' },
+      { value: 'Direct Lake', label: 'Semantic Model' },
+    ],
+    keyFinding:
+      'The orchestrated four-stage pipeline ingests, validates, transforms, and refreshes FlowOps’ operational data end-to-end in under eight minutes, passing all 19 automated data-quality checks before any of it reaches the analytical layer.',
+    businessProblem:
+      "FlowOps stores tickets, teams, SLAs, and delivery activity in PostgreSQL, and it's built to answer \"what needs attention right now.\" That's a different question from \"how has the team performed over the last quarter,\" and answering the second one well means taking FlowOps' operational data somewhere else: a platform built for analysis, not transactions. This project builds that platform in Microsoft Fabric, around FlowOps' actual operational schema rather than a synthetic dataset built for the occasion.",
+    businessQuestions: [
+      "Can FlowOps' live operational data be turned into a governed, production-grade analytical platform, ingestion through semantic modeling, without querying the operational database directly for reporting?",
+    ],
+    method: [
+      'Fabric Data Factory (Ingest)',
+      'Bronze Lakehouse',
+      'Data Quality Validation',
+      'Silver Lakehouse (Transform)',
+      'Gold Warehouse (Model)',
+      'Direct Lake (Serve)',
+      'Power BI (Analyze)',
+    ],
+    dashboardImages: [
+      { label: 'Architecture · source through consumption, four layers', src: flowOpsFabricArchitecture },
+      { label: 'Operations Overview · what’s the overall state of the queue?', src: flowOpsFabricOperations },
+      { label: 'Team Performance · where is operational pressure concentrated?', src: flowOpsFabricTeamPerformance },
+      { label: 'Ticket Details · what does the work actually look like, ticket by ticket?', src: flowOpsFabricTicketDetails },
+      { label: 'Pipeline run · all four orchestrated activities succeeded, in sequence', src: flowOpsFabricPipelineRun },
+      { label: 'Silver Lakehouse · dimension/fact tables plus persisted data-quality results', src: flowOpsFabricSilverLakehouse },
+      { label: 'Semantic model · SM_FlowOps_Analytics in Model view', src: flowOpsFabricSemanticModel },
+      { label: 'Fabric workspace · every artifact in the platform, in one place', src: flowOpsFabricWorkspace },
+    ],
+    keyFindingsDetailed: [
+      {
+        headline: 'Incremental ingestion was validated, not just configured',
+        detail:
+          'A three-step test proved watermark-based change detection actually works: an initial load of 635 tickets, 3,382 ticket events, and 1,105 comments; a no-change run that correctly detected zero changes; and a controlled update where a single edited ticket produced exactly one detected change and four new ticket events after the Silver/Gold refresh.',
+      },
+      {
+        headline: 'Data quality is a gate, not an afterthought',
+        detail:
+          '19 automated checks spanning completeness, uniqueness, domain validity, temporal logic, and referential integrity run before data is allowed to reach the Silver layer, with results persisted to a queryable table rather than just printed to a notebook cell.',
+      },
+      {
+        headline: 'The Gold layer is modeled for analysis, not copied from the source',
+        detail:
+          "The warehouse separates dimensions (DimDate, DimUser, DimTeam, DimCategory, DimProject, DimOrganization, DimTicket) from facts (FactTicket, FactTicketEvent), the shape a semantic model and Power BI are actually built to consume, rather than mirroring FlowOps' transactional schema.",
+      },
+      {
+        headline: 'Power BI never touches PostgreSQL directly',
+        detail:
+          'Every report page queries the Direct Lake semantic model, which reads the Gold Warehouse’s OneLake data directly with no separate import/refresh copy to keep in sync.',
+      },
+    ],
+    reflection:
+      "This platform validates each pipeline run's data quality but doesn't retain run-over-run history yet, and it doesn't yet cover additional analytical dimensions like SLA configuration history or sprint/backlog analytics. Fabric governance (sensitivity labels, deployment pipelines) and CI/CD automation for the Fabric artifacts themselves are also still future scope. AI-assisted ticket intelligence is a natural next idea for this kind of platform, but it isn't implemented here and shouldn't be read as a claim about the current build.",
+    artifacts: [
+      { label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/flow-ops-fabric' },
+      { label: 'FlowOps Live Demo', url: 'https://flow-ops.onrender.com' },
+      { label: 'FlowOps Source Code', url: 'https://github.com/edzarquiza/flow-ops' },
+    ],
+  },
   {
     slug: 'ecommerce-performance-analysis',
     title: 'E-Commerce Performance Analysis',
@@ -561,76 +634,5 @@ export const projects: Project[] = [
       { label: 'n8n workflow · OpsFlow AI request intake (Operations)', src: aureliaOperationsWorkflow },
     ],
     artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/aurelia-ai' }],
-  },
-  {
-    slug: 'flowops-fabric',
-    title: 'FlowOps Service Operations Analytics Platform',
-    category: 'powerbi',
-    status: 'published',
-    oneLiner:
-      "FlowOps' operational database answers \"what needs attention right now,\" not \"how has the team performed over time.\" Built a Microsoft Fabric analytical platform around FlowOps' real operational data: incremental ingestion, a Bronze/Silver/Gold lakehouse and warehouse, automated data-quality validation, a Direct Lake semantic model, and a three-page Power BI report, with Power BI as the last of eight stages data passes through, not the whole project.",
-    tools: ['Microsoft Fabric', 'Fabric Data Factory', 'PySpark', 'Fabric Warehouse', 'Direct Lake', 'Power BI', 'DAX', 'PostgreSQL'],
-    heroImage: flowOpsFabricOperations,
-    keyResults: [
-      { value: '19', label: 'Automated Data Quality Checks' },
-      { value: '4', label: 'Orchestrated Pipeline Stages' },
-      { value: 'Bronze / Silver / Gold', label: 'Lakehouse Architecture' },
-      { value: 'Direct Lake', label: 'Semantic Model' },
-    ],
-    keyFinding:
-      'The orchestrated four-stage pipeline ingests, validates, transforms, and refreshes FlowOps’ operational data end-to-end in under eight minutes, passing all 19 automated data-quality checks before any of it reaches the analytical layer.',
-    businessProblem:
-      "FlowOps stores tickets, teams, SLAs, and delivery activity in PostgreSQL, and it's built to answer \"what needs attention right now.\" That's a different question from \"how has the team performed over the last quarter,\" and answering the second one well means taking FlowOps' operational data somewhere else: a platform built for analysis, not transactions. This project builds that platform in Microsoft Fabric, around FlowOps' actual operational schema rather than a synthetic dataset built for the occasion.",
-    businessQuestions: [
-      "Can FlowOps' live operational data be turned into a governed, production-grade analytical platform, ingestion through semantic modeling, without querying the operational database directly for reporting?",
-    ],
-    method: [
-      'Fabric Data Factory (Ingest)',
-      'Bronze Lakehouse',
-      'Data Quality Validation',
-      'Silver Lakehouse (Transform)',
-      'Gold Warehouse (Model)',
-      'Direct Lake (Serve)',
-      'Power BI (Analyze)',
-    ],
-    dashboardImages: [
-      { label: 'Architecture · source through consumption, four layers', src: flowOpsFabricArchitecture },
-      { label: 'Operations Overview · what’s the overall state of the queue?', src: flowOpsFabricOperations },
-      { label: 'Team Performance · where is operational pressure concentrated?', src: flowOpsFabricTeamPerformance },
-      { label: 'Ticket Details · what does the work actually look like, ticket by ticket?', src: flowOpsFabricTicketDetails },
-      { label: 'Pipeline run · all four orchestrated activities succeeded, in sequence', src: flowOpsFabricPipelineRun },
-      { label: 'Silver Lakehouse · dimension/fact tables plus persisted data-quality results', src: flowOpsFabricSilverLakehouse },
-      { label: 'Semantic model · SM_FlowOps_Analytics in Model view', src: flowOpsFabricSemanticModel },
-      { label: 'Fabric workspace · every artifact in the platform, in one place', src: flowOpsFabricWorkspace },
-    ],
-    keyFindingsDetailed: [
-      {
-        headline: 'Incremental ingestion was validated, not just configured',
-        detail:
-          'A three-step test proved watermark-based change detection actually works: an initial load of 635 tickets, 3,382 ticket events, and 1,105 comments; a no-change run that correctly detected zero changes; and a controlled update where a single edited ticket produced exactly one detected change and four new ticket events after the Silver/Gold refresh.',
-      },
-      {
-        headline: 'Data quality is a gate, not an afterthought',
-        detail:
-          '19 automated checks spanning completeness, uniqueness, domain validity, temporal logic, and referential integrity run before data is allowed to reach the Silver layer, with results persisted to a queryable table rather than just printed to a notebook cell.',
-      },
-      {
-        headline: 'The Gold layer is modeled for analysis, not copied from the source',
-        detail:
-          "The warehouse separates dimensions (DimDate, DimUser, DimTeam, DimCategory, DimProject, DimOrganization, DimTicket) from facts (FactTicket, FactTicketEvent), the shape a semantic model and Power BI are actually built to consume, rather than mirroring FlowOps' transactional schema.",
-      },
-      {
-        headline: 'Power BI never touches PostgreSQL directly',
-        detail:
-          'Every report page queries the Direct Lake semantic model, which reads the Gold Warehouse’s OneLake data directly with no separate import/refresh copy to keep in sync.',
-      },
-    ],
-    reflection:
-      "This platform validates each pipeline run's data quality but doesn't retain run-over-run history yet, and it doesn't yet cover additional analytical dimensions like SLA configuration history or sprint/backlog analytics. Fabric governance (sensitivity labels, deployment pipelines) and CI/CD automation for the Fabric artifacts themselves are also still future scope. AI-assisted ticket intelligence is a natural next idea for this kind of platform, but it isn't implemented here and shouldn't be read as a claim about the current build.",
-    artifacts: [
-      { label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/flow-ops-fabric' },
-      { label: 'FlowOps Live Demo', url: 'https://flow-ops.onrender.com' },
-      { label: 'FlowOps Source Code', url: 'https://github.com/edzarquiza/flow-ops' },
-    ],
   },
 ]

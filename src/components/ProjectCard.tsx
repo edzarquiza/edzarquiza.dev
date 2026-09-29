@@ -15,7 +15,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="-m-8 mb-6 aspect-video overflow-hidden border-b border-border bg-surface">
           <img
             src={project.heroImage}
-            alt={`${project.title} dashboard preview`}
+            alt={project.heroImageAlt ?? `${project.title} dashboard preview`}
             className="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03]"
           />
         </div>

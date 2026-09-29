@@ -12,7 +12,11 @@ export default function ProjectRow({ project, index, reverse = false }: ProjectR
 
   const visual = project.heroImage ? (
     <div className="w-full overflow-hidden border border-border">
-      <img src={project.heroImage} alt={`${project.title} dashboard preview`} className="w-full object-cover" />
+      <img
+        src={project.heroImage}
+        alt={project.heroImageAlt ?? `${project.title} dashboard preview`}
+        className="w-full object-cover"
+      />
     </div>
   ) : (
     <div className="flex aspect-[4/3] w-full items-center justify-center border border-border bg-surface">

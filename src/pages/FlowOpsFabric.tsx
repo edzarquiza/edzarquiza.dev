@@ -170,9 +170,10 @@ export default function FlowOpsFabric() {
         backLabel="Back to Projects"
       >
         <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-white/60">
-          FlowOps answers what needs attention right now. This platform answers the other question: an end-to-end
-          Microsoft Fabric analytical data platform built around FlowOps&rsquo; real operational data, not a
-          synthetic dataset built for the occasion.
+          This is a Microsoft Fabric data engineering platform, not a Power BI dashboard project. Power BI is the
+          last of eight stages data passes through: an orchestrated ingestion pipeline, a Bronze/Silver/Gold
+          lakehouse and warehouse, automated data-quality validation, and a Direct Lake semantic model come first,
+          built around FlowOps&rsquo; real operational data, not a synthetic dataset built for the occasion.
         </p>
       </PageHeader>
 
