@@ -184,13 +184,13 @@ export default function AureliaAI() {
           </h2>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             Before the Invoice Control Center existed, this was the whole product. A user types a plain-language
-            operational request into a single field &mdash; &ldquo;I cannot connect to the company VPN&rdquo; is
-            the kind of thing it&rsquo;s built for &mdash; and the frontend posts that text to an n8n webhook.
+            operational request into a single field (&ldquo;I cannot connect to the company VPN&rdquo; is
+            the kind of thing it&rsquo;s built for), and the frontend posts that text to an n8n webhook.
             Everything past that point happens in n8n: AI classifies the request, deterministic logic calculates
             its priority and SLA, a confidence check decides whether it&rsquo;s routed straight through or escalated
             to human review, and a knowledge-base lookup attaches guidance where one is found. The frontend&rsquo;s
-            job is just to render whatever comes back &mdash; category, routing department, priority, SLA,
-            processing mode, and any knowledge-base guidance &mdash; exactly as n8n returns it, never recomputing
+            job is just to render whatever comes back (category, routing department, priority, SLA,
+            processing mode, and any knowledge-base guidance) exactly as n8n returns it, never recomputing
             any of it itself.
           </p>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">

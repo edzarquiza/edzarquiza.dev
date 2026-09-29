@@ -12,6 +12,7 @@ import WorkforceRetentionAnalysis from './pages/WorkforceRetentionAnalysis'
 import DemandIntelligenceAnalysis from './pages/DemandIntelligenceAnalysis'
 import AutomatedFinancePipeline from './pages/AutomatedFinancePipeline'
 import FlowOps from './pages/FlowOps'
+import FlowOpsFabric from './pages/FlowOpsFabric'
 import AureliaAI from './pages/AureliaAI'
 import About from './pages/About'
 import Credentials from './pages/Credentials'
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/work/demand-intelligence-retail-forecasting" element={<DemandIntelligenceAnalysis />} />
           <Route path="/work/automated-finance-data-pipeline" element={<AutomatedFinancePipeline />} />
           <Route path="/work/flowops" element={<FlowOps />} />
+          <Route path="/work/flowops-fabric" element={<FlowOpsFabric />} />
           <Route path="/work/aurelia-ai" element={<AureliaAI />} />
           <Route path="/work/:slug" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />

@@ -136,7 +136,7 @@ export default function FlowOps() {
         backLabel="Back to Projects"
       >
         <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-white/60">
-          Service-desk teams don&rsquo;t struggle to see their tickets &mdash; they struggle to see which ones
+          Service-desk teams don&rsquo;t struggle to see their tickets. They struggle to see which ones
           need a decision right now. FlowOps is a deployed, tested operations platform built to answer exactly
           that, with a deterministic Attention engine that shows the evidence behind every at-risk ticket.
         </p>
@@ -217,7 +217,7 @@ export default function FlowOps() {
           <p className="mt-6 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             Attention is deterministic (same input, same output, every time), policy-driven (every rule lives in one
             class), read-only (computed on read from existing ticket state, nothing pre-materialized), and not an AI
-            model &mdash; no scoring, no training data, no black box. Eight named signals decide whether a ticket
+            model, no scoring, no training data, no black box. Eight named signals decide whether a ticket
             needs attention:
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
@@ -245,8 +245,8 @@ export default function FlowOps() {
             them as a DTO the UI renders.
           </p>
           <p className="mt-6 max-w-2xl font-serif text-base font-medium leading-relaxed text-charcoal">
-            The SQL prefilter must be a provable superset of every ticket the policy could classify as at-risk
-            &mdash; it&rsquo;s allowed to reduce the search space, not redefine the business rule.
+            The SQL prefilter must be a provable superset of every ticket the policy could classify as at-risk.
+            It&rsquo;s allowed to reduce the search space, not redefine the business rule.
           </p>
           <p className="mt-6 font-serif text-sm leading-relaxed text-charcoal/80">
             That superset property isn&rsquo;t a comment or a convention. It&rsquo;s enforced by a dedicated
@@ -324,7 +324,7 @@ export default function FlowOps() {
           <p className="mt-6 font-serif text-sm leading-relaxed text-charcoal/80">
             FlowOps is a modular monolith: one deployable with module boundaries kept as a discipline, not a network
             boundary. A deliberate departure from a textbook layered app is that Application references
-            Infrastructure directly, with no repository/unit-of-work layer between them &mdash; a choice recorded,
+            Infrastructure directly, with no repository/unit-of-work layer between them, a choice recorded,
             with its alternatives and trade-offs, across 34 accepted architecture decision records.
           </p>
           <div className="mt-6">
@@ -346,7 +346,7 @@ export default function FlowOps() {
             The Attention engine is deterministic by design, not because machine learning was out of reach. An
             explainable rule a support lead can verify line by line is more useful here than a score they have to
             trust. Every signal, every threshold, and every ranking decision lives in one policy class that can be
-            read top to bottom &mdash; there is nothing in it that has to be taken on faith.
+            read top to bottom. There is nothing in it that has to be taken on faith.
           </p>
         </section>
 
@@ -407,7 +407,7 @@ export default function FlowOps() {
           <FlowChips steps={deploymentFlow} />
           <p className="mt-6 font-serif text-sm leading-relaxed text-charcoal/80">
             Render is connected directly to the GitHub repository and, on every push to <code className="rounded bg-surface px-1 py-0.5 font-mono text-xs text-teal-text">main</code>, builds
-            and deploys the image itself from the repo&rsquo;s own multi-stage Dockerfile &mdash; there is no
+            and deploys the image itself from the repo&rsquo;s own multi-stage Dockerfile. There is no
             separate GitHub Actions deploy step. GitHub Actions does run on every push and PR (restore, build,{' '}
             <code className="rounded bg-surface px-1 py-0.5 font-mono text-xs text-teal-text">dotnet format</code> check,
             the full test suite, a dependency vulnerability scan, and a local container build), but it verifies the
@@ -426,11 +426,11 @@ export default function FlowOps() {
             Deciding what &ldquo;at risk&rdquo; means, precisely enough to test.
           </h2>
           <p className="mt-4 font-serif text-sm leading-relaxed text-charcoal/80">
-            The hardest part wasn&rsquo;t the UI or the database schema &mdash; it was drawing the boundary around
+            The hardest part wasn&rsquo;t the UI or the database schema. It was drawing the boundary around
             each Attention signal precisely enough that it could be asserted in a test, not just eyeballed on a
             dashboard. An SLA that pauses correctly while a ticket is Pending, a prefilter that&rsquo;s provably a
             superset of the policy it feeds, an authorization rule that can&rsquo;t be bypassed by skipping a
-            check on one layer &mdash; each of those meant making a judgment call explicit enough to write down,
+            check on one layer: each of those meant making a judgment call explicit enough to write down,
             then defending it with a test that would fail if the judgment turned out to be wrong.
           </p>
         </section>
@@ -445,7 +445,7 @@ export default function FlowOps() {
           <ul className="mt-4 space-y-2">
             {deliberateLimits.map((limit) => (
               <li key={limit} className="flex items-start gap-2 font-serif text-sm text-charcoal/80">
-                <span className="mt-1 text-teal-text" aria-hidden="true">&mdash;</span>
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-teal" aria-hidden="true" />
                 {limit}
               </li>
             ))}
@@ -462,7 +462,7 @@ export default function FlowOps() {
           <section className="mt-16 max-w-2xl border-t border-border pt-10">
             <h2 className="font-display text-xl font-bold text-charcoal">See it running, or read the code.</h2>
             <p className="mt-3 font-serif text-sm leading-relaxed text-text-secondary">
-              FlowOps is live, tested, and fully open source &mdash; the deployed demo, the repository, and the
+              FlowOps is live, tested, and fully open source: the deployed demo, the repository, and the
               architecture documentation behind it.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
