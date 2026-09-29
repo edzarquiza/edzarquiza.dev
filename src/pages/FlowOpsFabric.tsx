@@ -165,15 +165,18 @@ export default function FlowOpsFabric() {
       <PageHeader
         eyebrow={categoryLabels[project.category]}
         title={project.title}
-        description="How has the team performed, not just what needs attention right now?"
+        description="Turning a service-management application into an analytical data platform."
         backTo="/work"
         backLabel="Back to Projects"
       >
         <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-white/60">
-          This is a Microsoft Fabric data engineering platform, not a Power BI dashboard project. Power BI is the
-          last of eight stages data passes through: an orchestrated ingestion pipeline, a Bronze/Silver/Gold
-          lakehouse and warehouse, automated data-quality validation, and a Direct Lake semantic model come first,
-          built around FlowOps&rsquo; real operational data, not a synthetic dataset built for the occasion.
+          FlowOps captures the operational reality of tickets, teams, assignments, events, SLAs, and resolution.
+          This project builds the analytical layer around that application using Microsoft Fabric: from
+          incremental PostgreSQL ingestion and automated data-quality validation through Bronze/Silver processing,
+          a curated Gold Warehouse, Direct Lake semantic modeling, and Power BI analytics.
+        </p>
+        <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-white/60">
+          The result is a complete path from operational transaction to analytical insight.
         </p>
       </PageHeader>
 
