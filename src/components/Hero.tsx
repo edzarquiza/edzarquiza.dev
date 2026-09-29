@@ -20,7 +20,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-lg font-serif text-base leading-relaxed text-white/70">
-              I build Power BI reporting and data solutions that help turn operational data into decisions —
+              I build Power BI reporting and data solutions that help turn operational data into decisions,
               backed by years of experience building the automation systems, applications, and databases behind
               the data.
             </p>

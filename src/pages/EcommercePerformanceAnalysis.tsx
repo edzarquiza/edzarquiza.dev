@@ -74,7 +74,7 @@ export default function EcommercePerformanceAnalysis() {
 
         {/* 01 — THE OVERALL PICTURE */}
         <section className="mt-16">
-          <Eyebrow>01 — The Overall Picture</Eyebrow>
+          <Eyebrow>01 · The Overall Picture</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             First, I looked at the overall business.
           </h2>
@@ -97,7 +97,7 @@ export default function EcommercePerformanceAnalysis() {
 
         {/* 02 — THE OPERATIONAL STORY */}
         <section className="mt-16">
-          <Eyebrow>02 — The Operational Story</Eyebrow>
+          <Eyebrow>02 · The Operational Story</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             Where was the friction happening?
           </h2>
@@ -145,7 +145,7 @@ export default function EcommercePerformanceAnalysis() {
 
         {/* 03 — FROM PROBLEM TO OPPORTUNITY */}
         <section className="mt-16">
-          <Eyebrow>03 — From Problem to Opportunity</Eyebrow>
+          <Eyebrow>03 · From Problem to Opportunity</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             Where should the business focus?
           </h2>

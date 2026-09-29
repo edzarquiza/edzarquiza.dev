@@ -25,7 +25,7 @@ export default function Resume() {
         <div className="mt-10 overflow-hidden border border-border">
           <iframe
             src={siteConfig.resumeFile}
-            title={`${siteConfig.name} — Resume preview`}
+            title={`${siteConfig.name}: Resume preview`}
             className="h-[70vh] w-full"
           />
         </div>

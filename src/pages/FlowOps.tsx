@@ -33,7 +33,7 @@ const attentionSignals = [
 const realProductAreas = [
   {
     name: 'Multi-tenancy',
-    detail: 'A user’s role is scoped per organization, not global — the same person can hold a different role in a different organization.',
+    detail: 'A user’s role is scoped per organization, not global. The same person can hold a different role in a different organization.',
   },
   {
     name: 'Authorization',
@@ -45,7 +45,7 @@ const realProductAreas = [
   },
   {
     name: 'Projects & sprints',
-    detail: 'Weekly sprints and a drag-and-drop board, backed by server-authorized moves — nothing is applied optimistically.',
+    detail: 'Weekly sprints and a drag-and-drop board, backed by server-authorized moves. Nothing is applied optimistically.',
   },
   {
     name: 'Team Workload',
@@ -54,16 +54,16 @@ const realProductAreas = [
 ]
 
 const architectureLayers = [
-  { name: 'Web', detail: 'Razor Pages — PageModels bind input, call Application, render a view model.' },
-  { name: 'Application', detail: 'Queries & services — business workflows, authorization checks, DTOs.' },
-  { name: 'Infrastructure', detail: 'EF Core / PostgreSQL — the single DbContext, migrations, identity.' },
-  { name: 'Domain', detail: 'Rules & aggregates — the Ticket aggregate root, policies, invariants, no outward dependencies.' },
+  { name: 'Web', detail: 'Razor Pages: PageModels bind input, call Application, render a view model.' },
+  { name: 'Application', detail: 'Queries & services: business workflows, authorization checks, DTOs.' },
+  { name: 'Infrastructure', detail: 'EF Core / PostgreSQL: the single DbContext, migrations, identity.' },
+  { name: 'Domain', detail: 'Rules & aggregates: the Ticket aggregate root, policies, invariants, no outward dependencies.' },
 ]
 
 const nonDecisions = [
   {
     title: 'Microservices',
-    detail: 'One team, one deploy target, no independent scaling need — splitting would add network calls and operational overhead to solve a problem that doesn’t exist at this scale.',
+    detail: 'One team, one deploy target, no independent scaling need. Splitting would add network calls and operational overhead to solve a problem that doesn’t exist at this scale.',
   },
   {
     title: 'A repository / unit-of-work abstraction',
@@ -71,29 +71,29 @@ const nonDecisions = [
   },
   {
     title: 'CQRS / MediatR',
-    detail: 'Not introduced — the application layer’s services and DTOs already give a clear read/write separation without a mediator pipeline to maintain.',
+    detail: 'Not introduced. The application layer’s services and DTOs already give a clear read/write separation without a mediator pipeline to maintain.',
   },
   {
     title: 'A background scheduler for SLAs',
-    detail: 'SLA deadlines are derived on read from a ticket’s current state. Correctness doesn’t depend on a job having run recently — it’s always accurate the instant it’s viewed.',
+    detail: 'SLA deadlines are derived on read from a ticket’s current state. Correctness doesn’t depend on a job having run recently. It’s always accurate the instant it’s viewed.',
   },
   {
     title: 'An AI copilot',
-    detail: 'The Attention engine is deterministic by design, not because ML was out of reach — an explainable rule a support lead can verify is more useful here than a score they have to trust.',
+    detail: 'The Attention engine is deterministic by design, not because ML was out of reach. An explainable rule a support lead can verify is more useful here than a score they have to trust.',
   },
   {
     title: 'Real-time collaboration infrastructure',
-    detail: 'No live multiplayer editing or websocket presence layer — out of scope for the operational workflow this project is about.',
+    detail: 'No live multiplayer editing or websocket presence layer. This is out of scope for the operational workflow this project is about.',
   },
 ]
 
 const deploymentFlow = ['GitHub repository', 'Docker build', 'Render', 'FlowOps container', 'Neon PostgreSQL']
 
 const testingLayers = [
-  { layer: 'Domain', count: '333', proves: 'Aggregate/policy behavior — no database needed' },
+  { layer: 'Domain', count: '333', proves: 'Aggregate/policy behavior, no database needed' },
   { layer: 'Application', count: '650', proves: 'Service + authorization behavior against real PostgreSQL (Testcontainers)' },
   { layer: 'Web', count: '355', proves: 'Page rendering, authorization boundaries, form behavior' },
-  { layer: 'E2E', count: '35', proves: 'Real Chromium browser — actual layout, actual overflow, actual theme application' },
+  { layer: 'E2E', count: '35', proves: 'Real Chromium browser, actual layout, actual overflow, actual theme application' },
 ]
 
 const deliberateLimits = [
@@ -249,7 +249,7 @@ export default function FlowOps() {
             &mdash; it&rsquo;s allowed to reduce the search space, not redefine the business rule.
           </p>
           <p className="mt-6 font-serif text-sm leading-relaxed text-charcoal/80">
-            That superset property isn&rsquo;t a comment or a convention — it&rsquo;s enforced by a dedicated
+            That superset property isn&rsquo;t a comment or a convention. It&rsquo;s enforced by a dedicated
             test that seeds every signal and every non-signal condition and asserts the prefilter never misses one.
           </p>
         </section>

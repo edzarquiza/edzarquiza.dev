@@ -32,7 +32,7 @@ export const experience: ExperienceEntry[] = [
     end: '01/2026',
     type: 'Full time',
     highlights: [
-      'Built an automated Jira-to-Power BI data pipeline in Python — extracting operational data on a scheduled basis, transforming it into a governed reporting dataset, and feeding an auto-refreshing Power BI reporting layer',
+      'Built an automated Jira-to-Power BI data pipeline in Python, extracting operational data on a scheduled basis, transforming it into a governed reporting dataset, and feeding an auto-refreshing Power BI reporting layer',
       'Designed data models and reporting solutions covering automation performance, finance forecasting, Jira team KPIs, workload distribution, and capacity planning',
       'Developed approximately 10 Power BI reports used by leadership to monitor operational performance, workload, and financial planning',
       'Led a 3-person engineering team through the full delivery lifecycle: requirements, development, QA/QC, documentation, deployment, and production support',

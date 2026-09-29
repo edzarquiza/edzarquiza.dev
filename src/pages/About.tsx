@@ -52,7 +52,7 @@ export default function About() {
             <div>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Current Focus</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
-                Power BI and Data Analytics — building deeper expertise in data modeling, DAX, Power Query, and
+                Power BI and Data Analytics: building deeper expertise in data modeling, DAX, Power Query, and
                 business-focused reporting on top of my background in software development and automation.
               </p>
             </div>

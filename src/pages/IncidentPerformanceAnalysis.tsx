@@ -130,7 +130,7 @@ export default function IncidentPerformanceAnalysis() {
 
         {/* 01 — THE OVERALL PICTURE */}
         <section className="mt-16">
-          <Eyebrow>01 — The Overall Picture</Eyebrow>
+          <Eyebrow>01 · The Overall Picture</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             First, I looked at the scale of the operation.
           </h2>
@@ -157,7 +157,7 @@ export default function IncidentPerformanceAnalysis() {
 
         {/* 02 — THE SERVICE PERFORMANCE STORY */}
         <section className="mt-16">
-          <Eyebrow>02 — The Service Performance Story</Eyebrow>
+          <Eyebrow>02 · The Service Performance Story</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             The average resolution time hid something important.
           </h2>
@@ -218,7 +218,7 @@ export default function IncidentPerformanceAnalysis() {
 
         {/* 03 — WHERE THE WORKLOAD COMES FROM */}
         <section className="mt-16">
-          <Eyebrow>03 — Where the Workload Comes From</Eyebrow>
+          <Eyebrow>03 · Where the Workload Comes From</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             The next question was where the demand was concentrated.
           </h2>

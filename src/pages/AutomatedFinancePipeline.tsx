@@ -187,7 +187,7 @@ export default function AutomatedFinancePipeline() {
 
         {/* 01 — THE SYSTEM */}
         <section className="mt-16">
-          <Eyebrow>01 — The System</Eyebrow>
+          <Eyebrow>01 · The System</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             From a CSV folder to a live dashboard, with no manual step in between.
           </h2>
@@ -204,7 +204,7 @@ export default function AutomatedFinancePipeline() {
 
         {/* 02 — HOW IT PROTECTS THE DATA */}
         <section className="mt-16">
-          <Eyebrow>02 — How It Protects the Data</Eyebrow>
+          <Eyebrow>02 · How It Protects the Data</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             Every file is validated, deduplicated, and tracked before it reaches a report.
           </h2>
@@ -246,7 +246,7 @@ export default function AutomatedFinancePipeline() {
 
         {/* 03 — THE ANALYTICS */}
         <section className="mt-16">
-          <Eyebrow>03 — The Analytics</Eyebrow>
+          <Eyebrow>03 · The Analytics</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             Four connected views, from executive summary to pipeline health.
           </h2>

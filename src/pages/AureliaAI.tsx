@@ -19,11 +19,11 @@ const pipelineFlow = [
 ]
 
 const stack = [
-  { layer: 'Frontend', detail: 'React, TypeScript, Vite, plain CSS — no UI framework, no component library, no router.' },
+  { layer: 'Frontend', detail: 'React, TypeScript, Vite, plain CSS, no UI framework, no component library, no router.' },
   { layer: 'Automation', detail: 'n8n orchestrates the entire flow end-to-end and owns every business decision.' },
-  { layer: 'AI', detail: 'Ollama running Qwen 3 4B, local and self-hosted — used only for extraction, never for validation.' },
+  { layer: 'AI', detail: 'Ollama running Qwen 3 4B, local and self-hosted, used only for extraction, never for validation.' },
   { layer: 'Database', detail: 'PostgreSQL holds vendor/PO reference data and the automation audit trail.' },
-  { layer: 'Integration', detail: 'Three REST-style webhook endpoints (JSON + multipart) — the frontend never touches PostgreSQL or Ollama directly.' },
+  { layer: 'Integration', detail: 'Three REST-style webhook endpoints (JSON + multipart). The frontend never touches PostgreSQL or Ollama directly.' },
 ]
 
 const testScenarios = [
@@ -119,8 +119,8 @@ export default function AureliaAI() {
           </p>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             Once Ollama (Qwen 3 4B) turns the PDF into structured JSON, n8n looks up the vendor and purchase order
-            in PostgreSQL and runs a fixed set of checks — amount against the approved PO, currency match,
-            vendor and PO status — before checking for duplicates against prior runs. Every run, successful or
+            in PostgreSQL and runs a fixed set of checks: amount against the approved PO, currency match,
+            vendor and PO status, before checking for duplicates against prior runs. Every run, successful or
             not, is written to an audit trail.
           </p>
         </section>
@@ -230,7 +230,7 @@ export default function AureliaAI() {
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             Three webhook endpoints define the entire integration surface: a POST endpoint that processes an
             uploaded invoice, and two GET endpoints that serve operations and KPI data to the frontend. The n8n
-            workflows, PostgreSQL schema, and Ollama setup aren&rsquo;t in the public repository — only the
+            workflows, PostgreSQL schema, and Ollama setup aren&rsquo;t in the public repository. Only the
             React frontend is, as the project&rsquo;s own documentation makes clear. This diagram is the
             invoice-control workflow that a request actually runs through.
           </p>
@@ -261,7 +261,7 @@ export default function AureliaAI() {
           <Eyebrow>What This Demonstrates</Eyebrow>
           <h2 className="mt-3 font-display text-xl font-bold text-charcoal">A portfolio project, on synthetic data.</h2>
           <p className="mt-4 font-serif text-sm leading-relaxed text-charcoal/80">
-            Aurelia AI is a demo system on synthetic data, not a production deployment — there&rsquo;s no ERP
+            Aurelia AI is a demo system on synthetic data, not a production deployment. There&rsquo;s no ERP
             integration and no accuracy benchmark being claimed. What it demonstrates is AI-assisted document
             processing paired with workflow automation engineering, deterministic system design discipline,
             full-stack integration across React, n8n, PostgreSQL, and a local LLM, and attention to auditability

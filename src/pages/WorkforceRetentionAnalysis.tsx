@@ -155,7 +155,7 @@ export default function WorkforceRetentionAnalysis() {
 
         {/* 01 — THE OVERALL PICTURE */}
         <section className="mt-16">
-          <Eyebrow>01 — The Overall Picture</Eyebrow>
+          <Eyebrow>01 · The Overall Picture</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             First, I looked at the scale and stability of the workforce.
           </h2>
@@ -183,7 +183,7 @@ export default function WorkforceRetentionAnalysis() {
 
         {/* 02 — THE RETENTION PRESSURE STORY */}
         <section className="mt-16">
-          <Eyebrow>02 — The Retention Pressure Story</Eyebrow>
+          <Eyebrow>02 · The Retention Pressure Story</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             The pattern held up across performance levels.
           </h2>
@@ -226,7 +226,7 @@ export default function WorkforceRetentionAnalysis() {
 
         {/* 03 — WHO MAKES UP THE ACTIVE WORKFORCE */}
         <section className="mt-16">
-          <Eyebrow>03 — Who Makes Up the Active Workforce</Eyebrow>
+          <Eyebrow>03 · Who Makes Up the Active Workforce</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
             The current workforce skews toward longer-tenured, mid-career employees.
           </h2>

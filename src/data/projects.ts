@@ -111,10 +111,10 @@ const northstarSlideTitles = [
   'The Problem',
   'Architecture',
   'Data Quality',
-  'Dashboard Page 1 — Executive Finance Overview',
-  'Dashboard Page 2 — Receivables Risk',
-  'Dashboard Page 3 — Payment & Customer Performance',
-  'Dashboard Page 4 — Pipeline Health',
+  'Dashboard Page 1: Executive Finance Overview',
+  'Dashboard Page 2: Receivables Risk',
+  'Dashboard Page 3: Payment & Customer Performance',
+  'Dashboard Page 4: Pipeline Health',
   'Technology',
   'Northstar Distribution Group',
 ]
@@ -124,7 +124,7 @@ function buildSlides(modules: Record<string, string>, titles: string[], deckTitl
     .sort()
     .map((path, i) => ({
       src: modules[path],
-      alt: titles[i] ? `${deckTitle} — ${titles[i]}` : `${deckTitle} — slide ${i + 1}`,
+      alt: titles[i] ? `${deckTitle}: ${titles[i]}` : `${deckTitle}: slide ${i + 1}`,
     }))
 }
 
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     category: 'powerbi',
     status: 'published',
     oneLiner:
-      "How is the business performing across sales, delivery, and customer experience — and where's the biggest opportunity? A Power BI analysis of 99K+ orders (DAX, Power Query, data modeling) found that late deliveries were tied to a sharp drop in customer satisfaction — a clear signal for where operational attention pays off most.",
+      "How is the business performing across sales, delivery, and customer experience, and where's the biggest opportunity? A Power BI analysis of 99K+ orders (DAX, Power Query, data modeling) found that late deliveries were tied to a sharp drop in customer satisfaction, a clear signal for where operational attention pays off most.",
     tools: ['Power BI', 'Power Query', 'DAX', 'Data Modeling'],
     heroImage: caseStudy1Executive,
     keyResults: [
@@ -195,9 +195,9 @@ export const projects: Project[] = [
       'How is the e-commerce business performing across sales, delivery, customer experience, and geographic markets, and where are the biggest opportunities for improvement and growth?',
     ],
     dashboardImages: [
-      { label: '01 — Executive Overview', src: caseStudy1Executive },
-      { label: '02 — Delivery & Customer Experience', src: caseStudy1Delivery },
-      { label: '03 — Commercial & Geographic Performance', src: caseStudy1Commercial },
+      { label: '01 · Executive Overview', src: caseStudy1Executive },
+      { label: '02 · Delivery & Customer Experience', src: caseStudy1Delivery },
+      { label: '03 · Commercial & Geographic Performance', src: caseStudy1Commercial },
     ],
     keyFindings: [
       '8.13% of delivered orders were late.',
@@ -210,7 +210,7 @@ export const projects: Project[] = [
       'Use revenue, customer value, delivery performance, and category performance together when prioritizing expansion and promotions.',
     ],
     reflection:
-      "This analysis works from a static historical extract of the Olist dataset, so it shows what happened, not what's happening now — a production version would need a live or scheduled refresh to stay useful for ongoing decisions. The late-delivery/review-score relationship is also a correlation, not a proven cause; the next step would be testing it against controllable factors like carrier or region before acting on it.",
+      "This analysis works from a static historical extract of the Olist dataset, so it shows what happened, not what's happening now. A production version would need a live or scheduled refresh to stay useful for ongoing decisions. The late-delivery/review-score relationship is also a correlation, not a proven cause; the next step would be testing it against controllable factors like carrier or region before acting on it.",
     presentation: {
       slides: buildSlides(ecommerceSlideModules, ecommerceSlideTitles, 'E-Commerce Performance Analysis'),
       pptxUrl: '/E-Commerce_Performance_Analysis.pptx',
@@ -225,7 +225,7 @@ export const projects: Project[] = [
     category: 'automation',
     status: 'published',
     oneLiner:
-      'Recurring finance files were processed by hand every cycle. Built an automated Python-to-PostgreSQL pipeline — validating, deduplicating, and loading the data every 15 minutes — with live Power BI reporting on both the finance results and the pipeline’s own health.',
+      'Recurring finance files were processed by hand every cycle. Built an automated Python-to-PostgreSQL pipeline, validating, deduplicating, and loading the data every 15 minutes, with live Power BI reporting on both the finance results and the pipeline’s own health.',
     tools: ['Python', 'PostgreSQL', 'SQL', 'Power BI', 'DAX', 'Windows Task Scheduler'],
     heroImage: project5ExecutiveOverview,
     keyResults: [
@@ -243,10 +243,10 @@ export const projects: Project[] = [
     ],
     method: ['Detect & Classify', 'Validate', 'Prevent Duplicates', 'Transform', 'Load to PostgreSQL', 'Report in Power BI'],
     dashboardImages: [
-      { label: '01 — Executive Finance Overview', src: project5ExecutiveOverview },
-      { label: '02 — Receivable Risk & Collection Priorities', src: project5ReceivablesRisk },
-      { label: '03 — Payment & Customer Performance', src: project5PaymentPerformance },
-      { label: '04 — Data Pipeline & Processing Health', src: project5PipelineHealth },
+      { label: '01 · Executive Finance Overview', src: project5ExecutiveOverview },
+      { label: '02 · Receivable Risk & Collection Priorities', src: project5ReceivablesRisk },
+      { label: '03 · Payment & Customer Performance', src: project5PaymentPerformance },
+      { label: '04 · Data Pipeline & Processing Health', src: project5PipelineHealth },
     ],
     keyFindingsDetailed: [
       {
@@ -289,7 +289,7 @@ export const projects: Project[] = [
     category: 'powerbi',
     status: 'published',
     oneLiner:
-      'Where is IT service performance under the most pressure? Turned simulated incident-ticket data into a Power BI dashboard covering SLA compliance, resolution time, and workload — surfacing that high-priority incidents were missing SLA at a dramatically higher rate than lower-priority ones.',
+      'Where is IT service performance under the most pressure? Turned simulated incident-ticket data into a Power BI dashboard covering SLA compliance, resolution time, and workload, surfacing that high-priority incidents were missing SLA at a dramatically higher rate than lower-priority ones.',
     tools: ['Power BI', 'Power Query', 'DAX', 'Data Modeling'],
     heroImage: caseStudy2CommandCenter,
     keyResults: [
@@ -307,9 +307,9 @@ export const projects: Project[] = [
     ],
     method: ['Business Scenario', 'Data Preparation', 'Data Modeling & DAX', 'Dashboard Analysis', 'Recommendations'],
     dashboardImages: [
-      { label: '01 — Incident Command Center', src: caseStudy2CommandCenter },
-      { label: '02 — Service Performance Deep Dive', src: caseStudy2Service },
-      { label: '03 — Incident Root Cause & Workload Analysis', src: caseStudy2RootCause },
+      { label: '01 · Incident Command Center', src: caseStudy2CommandCenter },
+      { label: '02 · Service Performance Deep Dive', src: caseStudy2Service },
+      { label: '03 · Incident Root Cause & Workload Analysis', src: caseStudy2RootCause },
     ],
     keyFindingsDetailed: [
       {
@@ -341,7 +341,7 @@ export const projects: Project[] = [
       'Investigate the smaller population of long-running incidents that materially increases mean resolution time.',
     ],
     reflection:
-      "The dataset is simulated, so the SLA and reassignment patterns are illustrative rather than a live operational signal — the value here is in the analytical approach (segmenting by priority, isolating what skews an average) rather than the specific numbers. A real deployment would need to validate these patterns against actual ticket data before using them to justify a process change.",
+      "The dataset is simulated, so the SLA and reassignment patterns are illustrative rather than a live operational signal. The value here is in the analytical approach (segmenting by priority, isolating what skews an average) rather than the specific numbers. A real deployment would need to validate these patterns against actual ticket data before using them to justify a process change.",
     presentation: {
       slides: buildSlides(incidentSlideModules, incidentSlideTitles, 'Incident Performance & Operational Analysis'),
       pptxUrl: '/Incident_Performance_Operational_Analysis.pptx',
@@ -356,7 +356,7 @@ export const projects: Project[] = [
     category: 'powerbi',
     status: 'published',
     oneLiner:
-      "How should a retail business plan around demand instead of just reporting last month's total? Built a SQL Server and Power BI model connecting historical demand, seasonal patterns, and a 12-month forecast — showing that growth was real but its momentum was quietly slowing year over year.",
+      "How should a retail business plan around demand instead of just reporting last month's total? Built a SQL Server and Power BI model connecting historical demand, seasonal patterns, and a 12-month forecast, showing that growth was real but its momentum was quietly slowing year over year.",
     tools: ['Power BI', 'SQL Server', 'DAX', 'Data Modeling', 'Data Analysis', 'Forecasting'],
     heroImage: caseStudy4Overview,
     keyResults: [
@@ -374,9 +374,9 @@ export const projects: Project[] = [
     ],
     method: ['Business Problem', 'SQL Data Preparation', 'Data Model', 'DAX Measures', 'Dashboard Analysis', 'Recommendations'],
     dashboardImages: [
-      { label: '01 — Demand Overview', src: caseStudy4Overview },
-      { label: '02 — Performance', src: caseStudy4Performance },
-      { label: '03 — Forecast', src: caseStudy4Forecast },
+      { label: '01 · Demand Overview', src: caseStudy4Overview },
+      { label: '02 · Performance', src: caseStudy4Performance },
+      { label: '03 · Forecast', src: caseStudy4Forecast },
     ],
     keyFindingsDetailed: [
       {
@@ -410,7 +410,7 @@ export const projects: Project[] = [
       'Continuously compare forecasts with actual results as new data becomes available, feeding variance analysis back into updated planning.',
     ],
     reflection:
-      "The 12-month forecast is only as reliable as the historical pattern it's built on, and the case study is upfront that uncertainty grows the further out it projects — it's meant to support planning conversations, not replace them. A live version would need the forecast re-validated against actual results on a regular cadence rather than treated as a one-time output.",
+      "The 12-month forecast is only as reliable as the historical pattern it's built on, and the case study is upfront that uncertainty grows the further out it projects. It's meant to support planning conversations, not replace them. A live version would need the forecast re-validated against actual results on a regular cadence rather than treated as a one-time output.",
     presentation: {
       slides: buildSlides(demandIntelligenceSlideModules, demandIntelligenceSlideTitles, 'Demand Intelligence'),
       pptxUrl: '/Demand_Intelligence_Presentation.pptx',
@@ -443,9 +443,9 @@ export const projects: Project[] = [
     ],
     method: ['Business Problem', 'Data Preparation', 'Data Model', 'Tableau Calculations', 'Dashboard Analysis', 'Recommendations'],
     dashboardImages: [
-      { label: '01 — Workforce Stability', src: caseStudy3WorkforceStability },
-      { label: '02 — Retention Pressure', src: caseStudy3RetentionPressure },
-      { label: '03 — Career Development & Progression', src: caseStudy3CareerDevelopment },
+      { label: '01 · Workforce Stability', src: caseStudy3WorkforceStability },
+      { label: '02 · Retention Pressure', src: caseStudy3RetentionPressure },
+      { label: '03 · Career Development & Progression', src: caseStudy3CareerDevelopment },
     ],
     keyFindingsDetailed: [
       {
@@ -476,7 +476,7 @@ export const projects: Project[] = [
       'Use the dashboard for ongoing workforce monitoring, tracking termination patterns across tenure, career level, and performance to catch emerging retention risks earlier.',
     ],
     reflection:
-      "Ruling out performance as the explanation for the 2–5 year termination spike is a useful finding, but it's not a complete explanation either — the dataset doesn't include the qualitative reasons people actually left, which would be the natural next step for HR to investigate. The analysis identifies where the pressure is concentrated, not why it exists.",
+      "Ruling out performance as the explanation for the 2–5 year termination spike is a useful finding, but it's not a complete explanation either. The dataset doesn't include the qualitative reasons people actually left, which would be the natural next step for HR to investigate. The analysis identifies where the pressure is concentrated, not why it exists.",
     presentation: {
       slides: buildSlides(workforceSlideModules, workforceSlideTitles, 'Workforce Retention & Career Progression Analysis'),
       pptxUrl: '/Workforce_Retention_Career_Progression.pptx',
@@ -491,7 +491,7 @@ export const projects: Project[] = [
     category: 'engineering',
     status: 'published',
     oneLiner:
-      "Service-desk teams don't struggle to see their tickets — they struggle to see which ones need a decision right now. Built FlowOps, a deployed, tested operations platform with a deterministic \"what needs attention\" engine that shows the evidence behind every at-risk ticket, not just a flag.",
+      "Service-desk teams don't struggle to see their tickets. They struggle to see which ones need a decision right now. Built FlowOps, a deployed, tested operations platform with a deterministic \"what needs attention\" engine that shows the evidence behind every at-risk ticket, not just a flag.",
     tools: ['.NET 10', 'ASP.NET Core', 'PostgreSQL', 'EF Core', 'Docker', 'Render'],
     heroImage: flowOpsDashboard,
     keyResults: [
@@ -527,7 +527,7 @@ export const projects: Project[] = [
     category: 'engineering',
     status: 'published',
     oneLiner:
-      "Letting an AI model both read an invoice and decide if it's valid means inheriting its uncertainty into a business decision. Built Aurelia AI, where AI only extracts the data — a deterministic backend, checked against real vendor and PO records, makes every pass/fail call.",
+      "Letting an AI model both read an invoice and decide if it's valid means inheriting its uncertainty into a business decision. Built Aurelia AI, where AI only extracts the data. A deterministic backend, checked against real vendor and PO records, makes every pass/fail call.",
     tools: ['React', 'TypeScript', 'n8n', 'Ollama (Qwen 3 4B)', 'PostgreSQL'],
     heroImage: aureliaInvoiceControlWorkflow,
     keyResults: [
@@ -537,7 +537,7 @@ export const projects: Project[] = [
       { value: 'Deterministic Rules', label: 'Validation' },
     ],
     keyFinding:
-      'The language model never makes a pass/fail call — a fixed, auditable rule set evaluated against PostgreSQL reference data decides every invoice outcome.',
+      'The language model never makes a pass/fail call. A fixed, auditable rule set evaluated against PostgreSQL reference data decides every invoice outcome.',
     businessProblem:
       "Invoice control workflows that lean on an LLM to both read a document and judge whether it's valid inherit the model's uncertainty into a business decision. Aurelia AI separates those two jobs: AI extracts structured data from a PDF invoice, and a deterministic backend, evaluated against real vendor and purchase-order records, decides whether it passes.",
     businessQuestions: [
@@ -545,12 +545,12 @@ export const projects: Project[] = [
     ],
     method: ['PDF Extraction', 'AI Structured Extraction', 'Reference Lookup', 'Deterministic Validation', 'Duplicate Detection', 'Audit Trail'],
     dashboardImages: [
-      { label: 'Invoice Control Center — KPI strip & Process Invoice panel', src: aureliaInvoiceControlCenter },
-      { label: 'Attention Center — failed, incomplete, and orphaned automation runs', src: aureliaAttentionCenter },
+      { label: 'Invoice Control Center · KPI strip & Process Invoice panel', src: aureliaInvoiceControlCenter },
+      { label: 'Attention Center · failed, incomplete, and orphaned automation runs', src: aureliaAttentionCenter },
       { label: 'Processing Breakdown & Automation Runs', src: aureliaProcessingBreakdown },
-      { label: 'Operations page — free-text request intake', src: aureliaOperationsPage },
-      { label: 'n8n workflow — invoice-control automation', src: aureliaInvoiceControlWorkflow },
-      { label: 'n8n workflow — OpsFlow AI request intake (Operations)', src: aureliaOperationsWorkflow },
+      { label: 'Operations page · free-text request intake', src: aureliaOperationsPage },
+      { label: 'n8n workflow · invoice-control automation', src: aureliaInvoiceControlWorkflow },
+      { label: 'n8n workflow · OpsFlow AI request intake (Operations)', src: aureliaOperationsWorkflow },
     ],
     artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/aurelia-ai' }],
   },

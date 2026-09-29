@@ -170,9 +170,9 @@ export default function DemandIntelligenceAnalysis() {
 
         {/* 01 — UNDERSTAND THE PAST */}
         <section className="mt-16">
-          <Eyebrow>01 — Understand the Past</Eyebrow>
+          <Eyebrow>01 · Understand the Past</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
-            Demand growth has been strong — but momentum is slowing.
+            Demand growth has been strong, but momentum is slowing.
           </h2>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             Total demand reached approximately 47.70M between 2013 and 2017, with an overall upward trajectory
@@ -212,9 +212,9 @@ export default function DemandIntelligenceAnalysis() {
 
         {/* 02 — IDENTIFY THE DRIVERS */}
         <section className="mt-16">
-          <Eyebrow>02 — Identify the Drivers</Eyebrow>
+          <Eyebrow>02 · Identify the Drivers</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
-            Demand is led by top performers — but supported by a broad base.
+            Demand is led by top performers, but supported by a broad base.
           </h2>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             Store 02 generated the most demand at approximately 6.1M, and Product 15 led product performance at
@@ -259,9 +259,9 @@ export default function DemandIntelligenceAnalysis() {
 
         {/* 03 — PREPARE FOR THE FUTURE */}
         <section className="mt-16">
-          <Eyebrow>03 — Prepare for the Future</Eyebrow>
+          <Eyebrow>03 · Prepare for the Future</Eyebrow>
           <h2 className="mt-3 max-w-2xl font-display text-xl font-bold text-charcoal">
-            Historical patterns provide direction — not certainty.
+            Historical patterns provide direction, not certainty.
           </h2>
           <p className="mt-4 max-w-2xl font-serif text-sm leading-relaxed text-charcoal/80">
             The forecast extended the historical analysis into a 12-month outlook, reflecting the seasonal

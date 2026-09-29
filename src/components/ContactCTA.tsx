@@ -9,7 +9,7 @@ export default function ContactCTA() {
           <div>
             <h2 className="font-display text-3xl font-bold text-charcoal sm:text-4xl">Let&rsquo;s connect.</h2>
             <p className="mt-3 max-w-xl font-serif text-sm leading-relaxed text-charcoal/70">
-              Open to Power BI, data analytics, and BI roles — as well as automation, AI, SQL, and software
+              Open to Power BI, data analytics, and BI roles, as well as automation, AI, SQL, and software
               development opportunities.
             </p>
           </div>
