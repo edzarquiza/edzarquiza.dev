@@ -43,12 +43,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    label: 'Automation & RPA',
+    label: 'Automation, RPA & AI',
     tier: 'supporting',
     items: [
       'UiPath',
       'Power Automate',
       'n8n',
+      'Ollama (Local LLMs)',
+      'LLM Integration',
+      'AI Agent Workflows',
       'VBA Macros',
       'Excel (Advanced)',
       'Process Automation',
