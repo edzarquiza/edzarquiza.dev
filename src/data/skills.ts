@@ -22,7 +22,7 @@ export const skillCategories: SkillCategory[] = [
   {
     label: 'Automation & RPA',
     tier: 'supporting',
-    items: ['UiPath', 'Power Automate', 'VBA', 'Process Automation', 'Production Support'],
+    items: ['UiPath', 'Power Automate', 'VBA Macros', 'Excel (Advanced)', 'Process Automation', 'Production Support'],
   },
   {
     label: 'Software Development & Deployment',
