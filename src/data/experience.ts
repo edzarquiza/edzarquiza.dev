@@ -17,8 +17,8 @@ export const experience: ExperienceEntry[] = [
     end: '04/2026',
     type: 'Full time',
     highlights: [
-      'Led a 4-person automation and IT operations team, owning delivery of DexIQ, an internal automation and AI platform, from requirements through production release',
-      'Ran sprint planning, backlog prioritization, and delivery tracking in Jira across the automation and IT operations roadmap',
+      'Led a 4-person automation and IT operations team, owning delivery of DexIQ, an external automation and AI product, from requirements through production release',
+      'Also served as temporary Product Lead for DexIQ, running scrum ceremonies, triaging the weekly ticket queue, and continuing the product roadmap',
       'Established production-readiness standards covering testing, documentation, security, scalability, and reliability, reducing post-release defects',
       'Served as escalation point for technical and delivery risk across engineering, operations, and business stakeholders',
       'Defined and tracked delivery and operations KPIs used to direct team capacity and improvement priorities',
