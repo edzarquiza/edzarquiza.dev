@@ -21,19 +21,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       )}
 
-      <div className="flex items-start justify-between gap-4">
-        <span className="font-mono text-sm font-extrabold text-teal-text">{String(index + 1).padStart(2, '0')}</span>
+      <div className="flex items-center justify-between gap-4">
+        <p className="flex items-center gap-2 font-sans text-xs font-medium text-text-secondary">
+          <span className="font-semibold text-teal-text">{String(index + 1).padStart(2, '0')}</span>
+          <span className="text-border" aria-hidden="true">/</span>
+          {categoryLabels[project.category]}
+        </p>
         {isComingSoon && (
           <span className="rounded-full border border-border px-3 py-1 text-xs font-medium text-text-secondary">
             In progress
           </span>
         )}
       </div>
-
-      <p className="mt-6 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">
-        {categoryLabels[project.category]}
-      </p>
-      <h3 className="mt-2 min-h-[4rem] font-display text-2xl font-bold text-charcoal transition-colors group-hover:text-teal-text">{project.title}</h3>
+      <h3 className="mt-3 min-h-[4rem] font-display text-2xl font-bold text-charcoal transition-colors group-hover:text-teal-text">{project.title}</h3>
       <p className="mt-3 font-serif text-sm leading-relaxed text-text-secondary">{project.oneLiner}</p>
 
       {project.tools.length > 0 && (
@@ -53,7 +53,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </ul>
       )}
 
-      <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-teal-text">
+      <div className="mt-auto flex items-center gap-2 pt-6 text-sm font-semibold text-teal-text">
         {isComingSoon ? 'Case study in progress' : 'View Case Study'}
         {!isComingSoon && (
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -65,7 +65,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   )
 
   const className =
-    'group flex flex-col border border-border bg-white p-8 transition-all duration-200 ease-out' +
+    'group flex h-full flex-col border border-border bg-white p-8 transition-all duration-200 ease-out' +
     (isComingSoon ? ' opacity-80' : ' hover:-translate-y-1 hover:border-teal/50 hover:shadow-md')
 
   if (isComingSoon) {

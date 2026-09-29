@@ -25,7 +25,7 @@ export default function PageHeader({ eyebrow, title, description, backTo, backLa
           {backLabel}
         </Link>
       )}
-      <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal">{eyebrow}</p>
+      <p className="font-sans text-xs font-semibold uppercase tracking-[0.06em] text-teal">{eyebrow}</p>
       <h1 className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
         {title}
       </h1>

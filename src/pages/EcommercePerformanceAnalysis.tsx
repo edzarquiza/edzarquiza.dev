@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader'
 import Button from '../components/Button'
 import SelectedDax from '../components/SelectedDax'
 import PresentationViewer from '../components/PresentationViewer'
+import Eyebrow from '../components/Eyebrow'
 import { projects, categoryLabels } from '../data/projects'
 
 const detailTools = ['Power BI', 'Power Query', 'DAX', 'Data Modeling', 'Data Analysis']
@@ -20,10 +21,6 @@ const questions = [
     detail: 'Does delivery performance appear to be connected with customer reviews?',
   },
 ]
-
-function Eyebrow({ children }: { children: string }) {
-  return <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">{children}</p>
-}
 
 export default function EcommercePerformanceAnalysis() {
   const project = projects.find((p) => p.slug === 'ecommerce-performance-analysis')!
@@ -63,7 +60,7 @@ export default function EcommercePerformanceAnalysis() {
           <ol className="mt-6 space-y-5">
             {questions.map((q, i) => (
               <li key={q.title} className="flex gap-4">
-                <span className="font-mono text-sm font-extrabold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
+                <span className="font-sans text-sm font-bold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <p className="font-display text-base font-bold text-charcoal">{q.title}</p>
                   <p className="mt-1 font-serif text-sm leading-relaxed text-text-secondary">{q.detail}</p>
@@ -187,7 +184,7 @@ export default function EcommercePerformanceAnalysis() {
                 { title: 'Target high-value opportunities', detail: project.recommendations[2] },
               ].map((rec, i) => (
                 <li key={rec.title} className="flex gap-4">
-                  <span className="font-mono text-sm font-extrabold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-sans text-sm font-bold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <p className="font-display text-base font-bold text-charcoal">{rec.title}</p>
                     <p className="mt-1 font-serif text-sm leading-relaxed text-text-secondary">{rec.detail}</p>

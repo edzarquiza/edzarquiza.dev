@@ -12,7 +12,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">Site</p>
+            <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-white/40">Site</p>
             <ul className="mt-3 space-y-2">
               {navLinks.map((link) => (
                 <li key={link.to}>
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">Connect</p>
+            <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-white/40">Connect</p>
             <ul className="mt-3 space-y-2">
               <li>
                 <a
@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col-reverse items-start justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center">
           <p className="text-xs text-white/40">© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <p className="font-mono text-xs uppercase tracking-[0.15em] text-white/40">
+          <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-white/40">
             {siteConfig.positioning}
           </p>
         </div>

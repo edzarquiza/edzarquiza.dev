@@ -17,7 +17,7 @@ export default function ProjectRow({ project, index, reverse = false }: ProjectR
   ) : (
     <div className="flex aspect-[4/3] w-full items-center justify-center border border-border bg-surface">
       <div className="text-center">
-        <span className="font-mono text-xs uppercase tracking-[0.15em] text-text-secondary/60">
+        <span className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-text-secondary/60">
           {isComingSoon ? 'Case study in progress' : categoryLabels[project.category]}
         </span>
       </div>
@@ -26,11 +26,12 @@ export default function ProjectRow({ project, index, reverse = false }: ProjectR
 
   const text = (
     <div className="flex flex-col justify-center">
-      <span className="font-mono text-sm font-extrabold text-teal-text">{String(index + 1).padStart(2, '0')}</span>
-      <p className="mt-4 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">
+      <p className="flex items-center gap-2 font-sans text-xs font-medium text-text-secondary">
+        <span className="font-semibold text-teal-text">{String(index + 1).padStart(2, '0')}</span>
+        <span className="text-border" aria-hidden="true">/</span>
         {categoryLabels[project.category]}
       </p>
-      <h3 className="mt-2 font-display text-2xl font-bold text-charcoal sm:text-3xl">{project.title}</h3>
+      <h3 className="mt-3 font-display text-2xl font-bold text-charcoal sm:text-3xl">{project.title}</h3>
       <p className="mt-4 max-w-md font-serif text-sm leading-relaxed text-text-secondary">{project.oneLiner}</p>
 
       {project.tools.length > 0 && (

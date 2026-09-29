@@ -21,9 +21,9 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"IBM Plex Sans"', 'sans-serif'],
-        sans: ['"IBM Plex Sans"', 'sans-serif'],
-        serif: ['"IBM Plex Serif"', 'serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
+        serif: ['"Inter"', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'monospace'],
       },
       maxWidth: {

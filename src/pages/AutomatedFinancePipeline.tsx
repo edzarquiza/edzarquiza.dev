@@ -4,6 +4,7 @@ import SelectedDax, { type DaxMeasure } from '../components/SelectedDax'
 import PresentationViewer from '../components/PresentationViewer'
 import { projects, categoryLabels } from '../data/projects'
 import architectureDiagram from '../assets/project5-architecture.png'
+import Eyebrow from '../components/Eyebrow'
 import pipelineFlowDiagram from '../assets/project5-pipeline-flow.png'
 import fileLifecycleDiagram from '../assets/project5-file-lifecycle.png'
 import northstarLogo from '../assets/project5-logo.png'
@@ -119,10 +120,6 @@ def is_file_processed(file_hash, connection):
     explanation: 'Content, not filename, decides whether a file is new. A renamed duplicate still gets caught.',
   },
 ]
-
-function Eyebrow({ children }: { children: string }) {
-  return <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">{children}</p>
-}
 
 export default function AutomatedFinancePipeline() {
   const project = projects.find((p) => p.slug === 'automated-finance-data-pipeline')!
@@ -259,7 +256,7 @@ export default function AutomatedFinancePipeline() {
           <div className="mt-8 space-y-12">
             {executiveOverview && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{executiveOverview.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{executiveOverview.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={executiveOverview.src} alt={executiveOverview.label} className="w-full" />
                 </div>
@@ -272,7 +269,7 @@ export default function AutomatedFinancePipeline() {
 
             {receivablesRisk && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{receivablesRisk.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{receivablesRisk.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={receivablesRisk.src} alt={receivablesRisk.label} className="w-full" />
                 </div>
@@ -285,7 +282,7 @@ export default function AutomatedFinancePipeline() {
 
             {paymentPerformance && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{paymentPerformance.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{paymentPerformance.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={paymentPerformance.src} alt={paymentPerformance.label} className="w-full" />
                 </div>
@@ -297,7 +294,7 @@ export default function AutomatedFinancePipeline() {
 
             {pipelineHealth && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{pipelineHealth.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{pipelineHealth.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={pipelineHealth.src} alt={pipelineHealth.label} className="w-full" />
                 </div>

@@ -4,7 +4,7 @@ export default function ExperienceItem({ role, company, location, start, end, ty
   return (
     <div className="grid gap-2 border-t border-border py-8 first:border-t-0 first:pt-0 md:grid-cols-[200px_1fr] md:gap-8">
       <div>
-        <p className="font-mono text-xs text-teal-text">
+        <p className="font-sans text-xs font-semibold text-teal-text">
           {start} – {end}
         </p>
         <p className="mt-1 text-xs text-text-secondary">{type}</p>

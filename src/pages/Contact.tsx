@@ -35,7 +35,7 @@ export default function Contact() {
         description="Currently focused on Power BI and data analytics roles. Also open to automation, RPA, AI-assisted development, SQL/database, and software development opportunities where my broader technical background applies."
         aside={
           <div className="border border-white/10 bg-white/5 p-6">
-            <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal">Quick Facts</p>
+            <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal">Quick Facts</p>
             <dl className="mt-4 space-y-3">
               {quickFacts.map((fact) => (
                 <div key={fact.label}>
@@ -58,7 +58,7 @@ export default function Contact() {
                 rel={channel.label === 'Email' ? undefined : 'noopener noreferrer'}
                 className="group block border border-border bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-md"
               >
-                <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{channel.label}</p>
+                <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{channel.label}</p>
                 <p className="mt-3 text-sm font-medium text-charcoal group-hover:text-teal-text">{channel.value}</p>
               </a>
             </Reveal>

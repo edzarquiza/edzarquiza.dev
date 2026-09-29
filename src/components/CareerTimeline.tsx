@@ -63,8 +63,8 @@ export default function CareerTimeline() {
                 </div>
 
                 <p
-                  className={`mt-4 font-mono text-xs ${
-                    isCurrent ? 'font-semibold uppercase tracking-[0.1em] text-yellow-dark' : 'text-teal-text'
+                  className={`mt-4 font-sans text-xs font-semibold ${
+                    isCurrent ? 'text-yellow-dark' : 'text-teal-text'
                   }`}
                 >
                   {step.year}
@@ -95,8 +95,8 @@ export default function CareerTimeline() {
               </div>
               <div className="pb-8">
                 <p
-                  className={`font-mono text-xs ${
-                    isCurrent ? 'font-semibold uppercase tracking-[0.1em] text-yellow-dark' : 'text-teal-text'
+                  className={`font-sans text-xs font-semibold ${
+                    isCurrent ? 'text-yellow-dark' : 'text-teal-text'
                   }`}
                 >
                   {step.year}

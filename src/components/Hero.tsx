@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="mx-auto max-w-content px-6 pb-12 pt-20 sm:pb-16 sm:pt-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div className="max-w-2xl animate-fade-up">
-            <p className="font-mono text-sm font-semibold uppercase tracking-[0.15em] text-teal">
+            <p className="font-sans text-sm font-semibold uppercase tracking-[0.06em] text-teal">
               Data / BI &middot; Automation &middot; Software Engineering
             </p>
 

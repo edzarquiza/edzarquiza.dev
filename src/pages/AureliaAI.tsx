@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader'
 import Button from '../components/Button'
 import StatStrip from '../components/StatStrip'
 import Reveal from '../components/Reveal'
+import Eyebrow from '../components/Eyebrow'
 import { projects, categoryLabels } from '../data/projects'
 
 const pipelineFlow = [
@@ -34,10 +35,6 @@ const testScenarios = [
   'Duplicate invoice',
   'Second valid vendor',
 ]
-
-function Eyebrow({ children }: { children: string }) {
-  return <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">{children}</p>
-}
 
 export default function AureliaAI() {
   const project = projects.find((p) => p.slug === 'aurelia-ai')!
@@ -158,7 +155,7 @@ export default function AureliaAI() {
           <div className="mt-8 space-y-12">
             {attentionCenter && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{attentionCenter.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{attentionCenter.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={attentionCenter.src} alt={attentionCenter.label} className="w-full" />
                 </div>
@@ -166,7 +163,7 @@ export default function AureliaAI() {
             )}
             {processingBreakdown && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{processingBreakdown.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{processingBreakdown.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={processingBreakdown.src} alt={processingBreakdown.label} className="w-full" />
                 </div>
@@ -204,7 +201,7 @@ export default function AureliaAI() {
           <div className="mt-8 space-y-12">
             {operationsPage && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{operationsPage.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{operationsPage.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={operationsPage.src} alt={operationsPage.label} className="w-full" />
                 </div>
@@ -212,7 +209,7 @@ export default function AureliaAI() {
             )}
             {operationsWorkflow && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{operationsWorkflow.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{operationsWorkflow.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={operationsWorkflow.src} alt={operationsWorkflow.label} className="w-full" />
                 </div>

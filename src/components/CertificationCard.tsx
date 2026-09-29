@@ -10,11 +10,11 @@ export default function CertificationCard({ name, issuer, date, expiry, url, not
       <div className="flex items-center justify-between gap-4">
         <div>
           {featured && (
-            <p className="mb-1 font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-teal-text">
+            <p className="mb-1 font-sans text-[10px] font-semibold uppercase tracking-[0.06em] text-teal-text">
               Featured
             </p>
           )}
-          <p className="font-mono text-xs leading-snug text-teal-text">
+          <p className="font-sans text-xs font-medium leading-snug text-teal-text">
             {date}
             {expiry && <span className="text-text-secondary"> &middot; Expires {expiry}</span>}
           </p>

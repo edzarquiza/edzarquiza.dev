@@ -50,28 +50,28 @@ export default function About() {
 
           <div className="space-y-6 border-t border-border pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Current Focus</p>
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Current Focus</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
                 Power BI and Data Analytics — building deeper expertise in data modeling, DAX, Power Query, and
                 business-focused reporting on top of my background in software development and automation.
               </p>
             </div>
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Availability</p>
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Availability</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
                 Currently open to opportunities in Power BI, Data Analytics, BI Development, Automation, and
                 related technology roles.
               </p>
             </div>
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Working Philosophy</p>
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Working Philosophy</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
                 Understand the business problem before touching a tool. Validate the data before trusting it.
                 Model before visualizing. Explain why a metric matters instead of just reporting it.
               </p>
             </div>
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Based In</p>
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Based In</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
                 {siteConfig.location}, working remotely with distributed teams, most recently across Australia.
               </p>

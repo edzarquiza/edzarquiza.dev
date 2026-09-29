@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader'
 import Button from '../components/Button'
 import SelectedDax, { type DaxMeasure } from '../components/SelectedDax'
 import PresentationViewer from '../components/PresentationViewer'
+import Eyebrow from '../components/Eyebrow'
 import { projects, categoryLabels } from '../data/projects'
 
 const detailTools = ['Power BI', 'Power Query', 'DAX', 'Data Modeling', 'Data Analysis']
@@ -77,10 +78,6 @@ RETURN
   },
 ]
 
-function Eyebrow({ children }: { children: string }) {
-  return <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">{children}</p>
-}
-
 export default function IncidentPerformanceAnalysis() {
   const project = projects.find((p) => p.slug === 'incident-performance-operational-analysis')!
   const [commandCenter, servicePerformance, workloadAnalysis] = project.dashboardImages ?? []
@@ -119,7 +116,7 @@ export default function IncidentPerformanceAnalysis() {
           <ol className="mt-6 space-y-5">
             {questions.map((q, i) => (
               <li key={q.title} className="flex gap-4">
-                <span className="font-mono text-sm font-extrabold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
+                <span className="font-sans text-sm font-bold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <p className="font-display text-base font-bold text-charcoal">{q.title}</p>
                   <p className="mt-1 font-serif text-sm leading-relaxed text-text-secondary">{q.detail}</p>
@@ -169,11 +166,11 @@ export default function IncidentPerformanceAnalysis() {
           <div className="mt-6 grid grid-cols-2 gap-4 sm:max-w-md">
             <div className="border border-border bg-surface p-4">
               <dt className="font-display text-2xl font-extrabold text-charcoal">178.17 hrs</dt>
-              <dd className="mt-1 font-mono text-xs uppercase tracking-[0.15em] text-text-secondary">Mean</dd>
+              <dd className="mt-1 font-sans text-xs font-medium uppercase tracking-[0.06em] text-text-secondary">Mean</dd>
             </div>
             <div className="border border-border bg-surface p-4">
               <dt className="font-display text-2xl font-extrabold text-yellow-dark">22.10 hrs</dt>
-              <dd className="mt-1 font-mono text-xs uppercase tracking-[0.15em] text-text-secondary">Median</dd>
+              <dd className="mt-1 font-sans text-xs font-medium uppercase tracking-[0.06em] text-text-secondary">Median</dd>
             </div>
           </div>
 
@@ -286,7 +283,7 @@ export default function IncidentPerformanceAnalysis() {
                 { title: 'Address long-running incidents', detail: project.recommendations[4] },
               ].map((rec, i) => (
                 <li key={rec.title} className="flex gap-4">
-                  <span className="font-mono text-sm font-extrabold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-sans text-sm font-bold text-teal-text">{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <p className="font-display text-base font-bold text-charcoal">{rec.title}</p>
                     <p className="mt-1 font-serif text-sm leading-relaxed text-text-secondary">{rec.detail}</p>
@@ -312,7 +309,7 @@ export default function IncidentPerformanceAnalysis() {
           <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {analyticalFramework.map((area) => (
               <div key={area.area} className="border border-border bg-surface p-4">
-                <dt className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{area.area}</dt>
+                <dt className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{area.area}</dt>
                 <dd className="mt-2 space-y-1 font-serif text-xs leading-relaxed text-charcoal/80">
                   {area.metrics.map((metric) => (
                     <p key={metric}>{metric}</p>

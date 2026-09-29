@@ -107,7 +107,7 @@ export default function Home() {
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {featuredProjects.map((project, i) => (
-              <Reveal key={project.slug} delay={(i % 2) * 80}>
+              <Reveal key={project.slug} delay={(i % 2) * 80} className="h-full">
                 <ProjectCard project={project} index={i} />
               </Reveal>
             ))}
@@ -128,7 +128,7 @@ export default function Home() {
             {method.map((item, i) => (
               <Reveal key={item.step} delay={i * 60}>
                 <li className="border-t-2 border-teal pt-4">
-                  <span className="font-mono text-xs text-teal-text">{item.step}</span>
+                  <span className="font-sans text-xs font-semibold text-teal-text">{item.step}</span>
                   <h3 className="mt-2 font-display text-base font-bold text-charcoal">{item.title}</h3>
                   <p className="mt-2 font-serif text-sm leading-relaxed text-text-secondary">{item.description}</p>
                 </li>

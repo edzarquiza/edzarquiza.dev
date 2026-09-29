@@ -19,7 +19,7 @@ export default function SectionHeader({
     <div className={`max-w-2xl ${align === 'center' ? 'mx-auto text-center' : ''}`}>
       {eyebrow && (
         <p
-          className={`mb-3 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.15em] ${
+          className={`mb-3 flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.06em] ${
             invert ? 'text-teal' : 'text-teal-text'
           }`}
         >

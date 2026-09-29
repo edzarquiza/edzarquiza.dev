@@ -25,7 +25,7 @@ export default function Credentials() {
         </div>
 
         <div className="mt-10 max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-[0.15em] text-text-secondary">Supporting credentials</p>
+          <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-text-secondary">Supporting credentials</p>
           <ul className="mt-4 divide-y divide-border border-t border-border">
             {supportingCerts.map((cert) => (
               <li key={cert.name} className="flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:gap-4">
@@ -34,7 +34,7 @@ export default function Credentials() {
                   <p className="font-display text-sm font-bold text-charcoal">{cert.name}</p>
                   <p className="mt-0.5 text-sm text-text-secondary">{cert.issuer}</p>
                 </div>
-                <p className="shrink-0 font-mono text-xs text-teal-text">
+                <p className="shrink-0 font-sans text-xs font-medium text-teal-text">
                   {cert.date}
                   {cert.expiry && <span className="text-text-secondary"> &middot; Expires {cert.expiry}</span>}
                 </p>
@@ -48,7 +48,7 @@ export default function Credentials() {
         <div className="mx-auto max-w-content px-6 py-16">
           <SectionHeader eyebrow="Education" title="Academic background" />
           <div className="mt-10 max-w-xl border border-border bg-white p-6">
-            <p className="font-mono text-xs text-teal-text">{education.year}</p>
+            <p className="font-sans text-xs font-medium text-teal-text">{education.year}</p>
             <h3 className="mt-2 font-display text-lg font-bold text-charcoal">{education.degree}</h3>
             <p className="mt-1 text-sm text-text-secondary">
               {education.school}, {education.location}

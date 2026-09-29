@@ -35,7 +35,7 @@ export default function ProjectDetail() {
       <div className="mx-auto max-w-content px-6 py-14">
         {!hasDetail ? (
           <div className="border border-border bg-surface p-10 text-center">
-            <p className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">In Progress</p>
+            <p className="font-sans text-xs font-semibold uppercase tracking-[0.06em] text-teal-text">In Progress</p>
             <h2 className="mt-3 font-display text-2xl font-bold text-charcoal">This case study is in progress.</h2>
             <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-text-secondary">
               This project will follow the same structure as every case study on this site: business problem,
@@ -80,19 +80,19 @@ export default function ProjectDetail() {
                 <DetailSection title="Data">
                   <dl className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <dt className="font-mono text-xs uppercase tracking-wide text-text-secondary">Source</dt>
+                      <dt className="font-sans text-xs font-medium uppercase tracking-wide text-text-secondary">Source</dt>
                       <dd className="mt-1 text-sm text-charcoal/80">{project.data.source}</dd>
                     </div>
                     <div>
-                      <dt className="font-mono text-xs uppercase tracking-wide text-text-secondary">Structure</dt>
+                      <dt className="font-sans text-xs font-medium uppercase tracking-wide text-text-secondary">Structure</dt>
                       <dd className="mt-1 text-sm text-charcoal/80">{project.data.structure}</dd>
                     </div>
                     <div>
-                      <dt className="font-mono text-xs uppercase tracking-wide text-text-secondary">Limitations</dt>
+                      <dt className="font-sans text-xs font-medium uppercase tracking-wide text-text-secondary">Limitations</dt>
                       <dd className="mt-1 text-sm text-charcoal/80">{project.data.limitations}</dd>
                     </div>
                     <div>
-                      <dt className="font-mono text-xs uppercase tracking-wide text-text-secondary">Assumptions</dt>
+                      <dt className="font-sans text-xs font-medium uppercase tracking-wide text-text-secondary">Assumptions</dt>
                       <dd className="mt-1 text-sm text-charcoal/80">{project.data.assumptions}</dd>
                     </div>
                   </dl>
@@ -149,7 +149,7 @@ export default function ProjectDetail() {
             <aside className="space-y-8">
               {project.tools.length > 0 && (
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-text-secondary">Tools</p>
+                  <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-text-secondary">Tools</p>
                   <ul className="mt-3 flex flex-wrap gap-2">
                     {project.tools.map((tool) => (
                       <li key={tool} className="rounded border border-border px-2.5 py-1 text-xs text-charcoal">
@@ -162,7 +162,7 @@ export default function ProjectDetail() {
 
               {project.artifacts && project.artifacts.length > 0 && (
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-text-secondary">Artifacts</p>
+                  <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-text-secondary">Artifacts</p>
                   <ul className="mt-3 space-y-2">
                     {project.artifacts.map((artifact) => (
                       <li key={artifact.url}>

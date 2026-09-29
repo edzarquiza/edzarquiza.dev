@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader'
 import Button from '../components/Button'
 import StatStrip from '../components/StatStrip'
 import Reveal from '../components/Reveal'
+import Eyebrow from '../components/Eyebrow'
 import { projects, categoryLabels } from '../data/projects'
 
 const glance = [
@@ -102,10 +103,6 @@ const deliberateLimits = [
   'A staffing/capacity-optimization system',
 ]
 
-function Eyebrow({ children }: { children: string }) {
-  return <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-teal-text">{children}</p>
-}
-
 function FlowChips({ steps }: { steps: string[] }) {
   return (
     <ol className="mt-6 flex flex-wrap items-center gap-2">
@@ -171,7 +168,7 @@ export default function FlowOps() {
             <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {glance.map((item) => (
                 <div key={item.label} className="border border-border bg-surface p-4">
-                  <dt className="font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{item.label}</dt>
+                  <dt className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{item.label}</dt>
                   <dd className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">{item.value}</dd>
                 </div>
               ))}
@@ -275,7 +272,7 @@ export default function FlowOps() {
           <div className="mt-10 space-y-12">
             {teamWorkload && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{teamWorkload.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{teamWorkload.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={teamWorkload.src} alt={teamWorkload.label} className="w-full" />
                 </div>
@@ -283,7 +280,7 @@ export default function FlowOps() {
             )}
             {sprintBoard && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{sprintBoard.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{sprintBoard.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={sprintBoard.src} alt={sprintBoard.label} className="w-full" />
                 </div>
@@ -291,7 +288,7 @@ export default function FlowOps() {
             )}
             {workQueue && (
               <div>
-                <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">{workQueue.label}</p>
+                <p className="mb-3 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">{workQueue.label}</p>
                 <div className="overflow-hidden border border-border">
                   <img src={workQueue.src} alt={workQueue.label} className="w-full" />
                 </div>
@@ -382,9 +379,9 @@ export default function FlowOps() {
             <table className="w-full min-w-[480px] border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-border">
-                  <th className="py-2 pr-4 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Layer</th>
-                  <th className="py-2 pr-4 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">Count</th>
-                  <th className="py-2 font-mono text-xs uppercase tracking-[0.15em] text-teal-text">What it proves</th>
+                  <th className="py-2 pr-4 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Layer</th>
+                  <th className="py-2 pr-4 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Count</th>
+                  <th className="py-2 font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">What it proves</th>
                 </tr>
               </thead>
               <tbody>
