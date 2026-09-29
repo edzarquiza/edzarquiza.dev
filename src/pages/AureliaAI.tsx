@@ -1,4 +1,5 @@
 import PageHeader from '../components/PageHeader'
+import BackToProjectsFloat from '../components/BackToProjectsFloat'
 import Button from '../components/Button'
 import StatStrip from '../components/StatStrip'
 import Reveal from '../components/Reveal'
@@ -43,6 +44,7 @@ export default function AureliaAI() {
 
   return (
     <>
+      <BackToProjectsFloat />
       <PageHeader
         eyebrow={categoryLabels[project.category]}
         title={project.title}

@@ -1,4 +1,5 @@
 import PageHeader from '../components/PageHeader'
+import BackToProjectsFloat from '../components/BackToProjectsFloat'
 import Button from '../components/Button'
 import SelectedDax, { type DaxMeasure } from '../components/SelectedDax'
 import PresentationViewer from '../components/PresentationViewer'
@@ -127,6 +128,7 @@ export default function AutomatedFinancePipeline() {
 
   return (
     <>
+      <BackToProjectsFloat />
       <PageHeader
         eyebrow={categoryLabels[project.category]}
         title={project.title}

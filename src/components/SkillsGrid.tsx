@@ -2,19 +2,19 @@ import { skillCategories, SkillTier } from '../data/skills'
 
 const tierStyles: Record<SkillTier, { wrapper: string; label: string; item: string; gap: string }> = {
   primary: {
-    wrapper: 'border border-border border-t-2 border-t-teal bg-surface p-5',
+    wrapper: 'border border-border border-t-2 border-t-teal bg-white p-5',
     label: 'text-base font-bold text-charcoal',
     item: 'text-sm text-charcoal/80',
     gap: 'mt-4 space-y-2',
   },
   secondary: {
-    wrapper: 'border border-border bg-surface p-5',
+    wrapper: 'border border-border bg-white p-5',
     label: 'text-sm font-bold text-charcoal',
     item: 'text-sm text-text-secondary',
     gap: 'mt-3 space-y-2',
   },
   supporting: {
-    wrapper: 'border border-border p-5',
+    wrapper: 'border border-border bg-white/60 p-5',
     label: 'text-sm font-semibold text-charcoal',
     item: 'text-xs text-text-secondary',
     gap: 'mt-3 space-y-1.5',

@@ -8,8 +8,8 @@ type StatStripProps = {
 export default function StatStrip({ stats, invert = false }: StatStripProps) {
   return (
     <dl
-      className={`grid grid-cols-2 gap-x-6 gap-y-5 border p-5 sm:grid-cols-4 sm:gap-4 ${
-        invert ? 'border-white/10 bg-white/5' : 'border-border bg-surface'
+      className={`grid grid-cols-2 gap-x-6 gap-y-5 border border-t-2 p-5 sm:grid-cols-4 sm:gap-4 ${
+        invert ? 'border-white/10 border-t-teal bg-white/5' : 'border-border border-t-teal bg-surface'
       }`}
     >
       {stats.map((stat) => (
