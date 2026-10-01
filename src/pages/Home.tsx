@@ -86,8 +86,8 @@ export default function Home() {
 
               <div className="border-l-2 border-teal py-1 pl-6 lg:mt-14">
                 <p className="font-serif text-lg font-medium leading-relaxed text-charcoal">
-                  Now I&rsquo;m applying that foundation to Power BI and data analytics. It isn&rsquo;t a restart.
-                  It&rsquo;s the next deliberate step in my career.
+                  Now I&rsquo;m applying that foundation to data engineering and data analytics. It isn&rsquo;t a
+                  restart. It&rsquo;s the next deliberate step in my career.
                 </p>
               </div>
             </div>

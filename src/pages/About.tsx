@@ -17,7 +17,7 @@ export default function About() {
       <PageHeader
         eyebrow="About"
         title="From IT support to automation leadership, now data and Power BI."
-        description="11 years of IT experience, applied to a growing specialization in Power BI and data analytics."
+        description="11 years of IT experience, applied to a growing focus on data engineering and data analytics."
       />
 
       <section className="mx-auto max-w-content px-6 py-16">
@@ -38,7 +38,7 @@ export default function About() {
               month, across requirements, development, testing, and deployment.
             </p>
             <p>
-              Power BI and data analytics were never separate from that work. Every automation team I've led has
+              Data engineering and data analytics were a natural extension of that foundation. Every automation team I've led has
               needed KPI tracking and reporting to prove it was working, including a Jira-to-Power BI pipeline I
               built that leadership used directly for sprint and workload decisions, alongside roughly ten Power
               BI reports covering automation performance, finance forecasting, and team workload. Building that
@@ -52,8 +52,9 @@ export default function About() {
             <div>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Current Focus</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
-                Power BI and Data Analytics: building deeper expertise in data modeling, DAX, Power Query, and
-                business-focused reporting on top of my background in software development and automation.
+                Data Engineering &amp; Data Analytics: building deeper expertise in data pipelines, SQL, Python,
+                and Microsoft Fabric, while continuing to grow my Power BI and data modeling work on top of an
+                existing foundation in software development and automation.
               </p>
             </div>
             <div>

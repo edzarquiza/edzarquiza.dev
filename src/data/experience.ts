@@ -119,7 +119,7 @@ export const careerJourney = [
 
 export const currentFocus = {
   year: 'CURRENT FOCUS',
-  role: 'Power BI & Data Analytics',
+  role: 'Data Engineering & Data Analytics',
   description: 'Applying my technology and automation background to data-driven decision making.',
   icon: 'data' as const,
 }

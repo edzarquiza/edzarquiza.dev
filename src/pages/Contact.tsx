@@ -32,7 +32,7 @@ export default function Contact() {
       <PageHeader
         eyebrow="Contact"
         title="Let’s connect."
-        description="Currently focused on Power BI and data analytics roles. Also open to automation, RPA, AI-assisted development, SQL/database, and software development opportunities where my broader technical background applies."
+        description="Currently open to opportunities in data engineering, data analytics, Power BI, and related technology roles."
         aside={
           <div className="border border-white/10 bg-white/5 p-6">
             <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal">Quick Facts</p>
