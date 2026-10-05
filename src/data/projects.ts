@@ -265,6 +265,52 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'veydrin',
+    title: 'Veydrin',
+    category: 'automation',
+    status: 'published',
+    oneLiner:
+      'A Databricks lakehouse data platform built on top of a real operational SaaS application: incremental PostgreSQL ingestion, medallion architecture, and a governed Gold model serving two different BI tools, Databricks AI/BI and ThoughtSpot, from one analytical contract.',
+    tools: ['Databricks', 'PySpark', 'Delta Lake', 'Unity Catalog', 'PostgreSQL', 'ThoughtSpot', 'Databricks AI/BI', 'React', 'ASP.NET Core'],
+    heroImage: veydrinArchitecture,
+    heroImageAlt: 'Veydrin platform architecture: SaaS app through PostgreSQL, Databricks medallion layers, to Databricks AI/BI and ThoughtSpot',
+    keyResults: [
+      { value: '$249.8K', label: 'Total MRR' },
+      { value: '$944.4K', label: 'Total Invoiced Revenue' },
+      { value: '60 / 60', label: 'Customers & Subscriptions' },
+      { value: '82.3%', label: 'Enterprise Revenue Concentration' },
+    ],
+    keyFinding:
+      'One governed Gold model feeds two structurally different BI tools, Databricks AI/BI dashboards and ThoughtSpot natural-language search, from a single incremental PostgreSQL-to-lakehouse pipeline.',
+    businessProblem:
+      "Veydrin's operational application stores customers, subscriptions, invoices, and support activity in PostgreSQL, built to run the business, not to analyze it. This project builds the analytical layer around that operational data: an incremental Databricks lakehouse pipeline that turns live transactional data into a governed Gold model, serving both executive dashboards and self-service search.",
+    businessQuestions: [
+      "Can a real operational SaaS application's PostgreSQL data be turned into a reliable, incrementally-updated lakehouse platform that serves two different BI consumption patterns from one governed model?",
+    ],
+    method: [
+      'PostgreSQL Federation',
+      'Watermark-Based Ingestion',
+      'Bronze (Raw)',
+      'Silver (Conformed)',
+      'Gold (Business Model)',
+      'Databricks AI/BI + ThoughtSpot',
+    ],
+    dashboardImages: [
+      { label: 'Platform architecture: app, PostgreSQL, Databricks medallion layers, and BI consumption', src: veydrinArchitecture },
+      { label: 'Data ingestion & reliability flow: watermark-based incremental extraction', src: veydrinIngestionReliability },
+      { label: 'Medallion architecture: Bronze, Silver, and Gold layer design', src: veydrinMedallionArchitecture },
+      { label: 'Gold layer in Unity Catalog: 7 tables, dimensions, facts, and business views', src: veydrinGoldModel },
+      { label: 'Analytics consumption: Gold feeding Databricks AI/BI and ThoughtSpot', src: veydrinConsumptionArchitecture },
+      { label: 'Databricks AI/BI: Revenue & Subscription Analytics dashboard', src: veydrinAibiDashboard },
+      { label: 'ThoughtSpot: Veydrin Subscription Analytics semantic model, built on Gold', src: veydrinThoughtspotModel },
+      { label: 'ThoughtSpot: natural-language search, "MRR by plan"', src: veydrinThoughtspotSearch },
+      { label: 'Veydrin operational dashboard: the source system behind the pipeline', src: veydrinAppDashboard },
+    ],
+    reflection:
+      "Built and tested on Databricks Free Edition, this is a portfolio-scale platform, not a production deployment with an SLA. The pipeline is batch/incremental by design, not streaming, and the medallion pipeline currently covers the subscription and billing domain (customers, plans, subscriptions, invoices); payments, support tickets, and usage events are reachable through the same federation but not yet modeled through to Gold. Authentication in the operational app is intentionally out of scope for this phase.",
+    artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/veydrin' }],
+  },
+  {
     slug: 'ecommerce-performance-analysis',
     title: 'E-Commerce Performance Analysis',
     category: 'powerbi',
@@ -643,51 +689,5 @@ export const projects: Project[] = [
       { label: 'n8n workflow · OpsFlow AI request intake (Operations)', src: aureliaOperationsWorkflow },
     ],
     artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/aurelia-ai' }],
-  },
-  {
-    slug: 'veydrin',
-    title: 'Veydrin',
-    category: 'automation',
-    status: 'published',
-    oneLiner:
-      'A Databricks lakehouse data platform built on top of a real operational SaaS application: incremental PostgreSQL ingestion, medallion architecture, and a governed Gold model serving two different BI tools, Databricks AI/BI and ThoughtSpot, from one analytical contract.',
-    tools: ['Databricks', 'PySpark', 'Delta Lake', 'Unity Catalog', 'PostgreSQL', 'ThoughtSpot', 'Databricks AI/BI', 'React', 'ASP.NET Core'],
-    heroImage: veydrinArchitecture,
-    heroImageAlt: 'Veydrin platform architecture: SaaS app through PostgreSQL, Databricks medallion layers, to Databricks AI/BI and ThoughtSpot',
-    keyResults: [
-      { value: '$249.8K', label: 'Total MRR' },
-      { value: '$944.4K', label: 'Total Invoiced Revenue' },
-      { value: '60 / 60', label: 'Customers & Subscriptions' },
-      { value: '82.3%', label: 'Enterprise Revenue Concentration' },
-    ],
-    keyFinding:
-      'One governed Gold model feeds two structurally different BI tools, Databricks AI/BI dashboards and ThoughtSpot natural-language search, from a single incremental PostgreSQL-to-lakehouse pipeline.',
-    businessProblem:
-      "Veydrin's operational application stores customers, subscriptions, invoices, and support activity in PostgreSQL, built to run the business, not to analyze it. This project builds the analytical layer around that operational data: an incremental Databricks lakehouse pipeline that turns live transactional data into a governed Gold model, serving both executive dashboards and self-service search.",
-    businessQuestions: [
-      "Can a real operational SaaS application's PostgreSQL data be turned into a reliable, incrementally-updated lakehouse platform that serves two different BI consumption patterns from one governed model?",
-    ],
-    method: [
-      'PostgreSQL Federation',
-      'Watermark-Based Ingestion',
-      'Bronze (Raw)',
-      'Silver (Conformed)',
-      'Gold (Business Model)',
-      'Databricks AI/BI + ThoughtSpot',
-    ],
-    dashboardImages: [
-      { label: 'Platform architecture: app, PostgreSQL, Databricks medallion layers, and BI consumption', src: veydrinArchitecture },
-      { label: 'Data ingestion & reliability flow: watermark-based incremental extraction', src: veydrinIngestionReliability },
-      { label: 'Medallion architecture: Bronze, Silver, and Gold layer design', src: veydrinMedallionArchitecture },
-      { label: 'Gold layer in Unity Catalog: 7 tables, dimensions, facts, and business views', src: veydrinGoldModel },
-      { label: 'Analytics consumption: Gold feeding Databricks AI/BI and ThoughtSpot', src: veydrinConsumptionArchitecture },
-      { label: 'Databricks AI/BI: Revenue & Subscription Analytics dashboard', src: veydrinAibiDashboard },
-      { label: 'ThoughtSpot: Veydrin Subscription Analytics semantic model, built on Gold', src: veydrinThoughtspotModel },
-      { label: 'ThoughtSpot: natural-language search, "MRR by plan"', src: veydrinThoughtspotSearch },
-      { label: 'Veydrin operational dashboard: the source system behind the pipeline', src: veydrinAppDashboard },
-    ],
-    reflection:
-      "Built and tested on Databricks Free Edition, this is a portfolio-scale platform, not a production deployment with an SLA. The pipeline is batch/incremental by design, not streaming, and the medallion pipeline currently covers the subscription and billing domain (customers, plans, subscriptions, invoices); payments, support tickets, and usage events are reachable through the same federation but not yet modeled through to Gold. Authentication in the operational app is intentionally out of scope for this phase.",
-    artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/veydrin' }],
   },
 ]
