@@ -15,6 +15,7 @@ import FlowOps from './pages/FlowOps'
 import FlowOpsFabric from './pages/FlowOpsFabric'
 import AureliaAI from './pages/AureliaAI'
 import Veydrin from './pages/Veydrin'
+import JobFlow from './pages/JobFlow'
 import About from './pages/About'
 import Credentials from './pages/Credentials'
 import Resume from './pages/Resume'
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/work/flowops-fabric" element={<FlowOpsFabric />} />
           <Route path="/work/aurelia-ai" element={<AureliaAI />} />
           <Route path="/work/veydrin" element={<Veydrin />} />
+          <Route path="/work/jobflow" element={<JobFlow />} />
           <Route path="/work/:slug" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/credentials" element={<Credentials />} />

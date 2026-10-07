@@ -33,6 +33,10 @@ import aureliaProcessingBreakdown from '../assets/aurelia-processing-breakdown.p
 import aureliaOperationsPage from '../assets/aurelia-operations-page.png'
 import aureliaInvoiceControlWorkflow from '../assets/aurelia-invoice-control-workflow.png'
 import aureliaOperationsWorkflow from '../assets/aurelia-operations-workflow.png'
+import jobflowArchitecture from '../assets/jobflow-architecture.png'
+import jobflowVipApprovalSlack from '../assets/jobflow-vip-approval-slack.png'
+import jobflowAuditLog from '../assets/jobflow-audit-log.png'
+import jobflowSlackNotifications from '../assets/jobflow-slack-notifications.png'
 import veydrinArchitecture from '../assets/veydrin-architecture.png'
 import veydrinIngestionReliability from '../assets/veydrin-ingestion-reliability.png'
 import veydrinMedallionArchitecture from '../assets/veydrin-medallion-architecture.png'
@@ -689,5 +693,41 @@ export const projects: Project[] = [
       { label: 'n8n workflow · OpsFlow AI request intake (Operations)', src: aureliaOperationsWorkflow },
     ],
     artifacts: [{ label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/aurelia-ai' }],
+  },
+  {
+    slug: 'jobflow',
+    title: 'JobFlow',
+    category: 'automation',
+    status: 'published',
+    oneLiner:
+      "When a ServiceM8 job is marked complete, what happens next depends on the job: routine work can go straight to billing, but VIP, after-hours, and warranty jobs each need different handling, and webhooks can even fire twice. I built a 30-step Zapier workflow that automates that coordination, enriching each event through the ServiceM8 API, checking for duplicates before writing anything, and keeping a person in the loop for VIP approval in Slack.",
+    tools: ['Zapier', 'Webhooks', 'ServiceM8 API', 'REST APIs', 'Slack', 'Zapier Tables'],
+    heroImage: jobflowArchitecture,
+    heroImageAlt: 'JobFlow architecture: ServiceM8 webhook through API enrichment, duplicate check, and business-rule routing to billing, Slack approval, or exception handling',
+    keyResults: [
+      { value: '30 / 30', label: 'Zap Steps Used (Trial Limit)' },
+      { value: '3', label: 'ServiceM8 API Touchpoints' },
+      { value: '5', label: 'Business Rule Paths' },
+      { value: 'Human-in-the-Loop', label: 'VIP Approval' },
+    ],
+    keyFinding:
+      'The workflow automates the coordination, not the judgment: routing, duplicate protection, and record-keeping run automatically, while VIP approval stays with a person in Slack.',
+    businessProblem:
+      "When a trade job is marked complete in ServiceM8, what happens next depends on the job. A routine job can go to billing. A VIP job needs someone to decide. An after-hours job needs attention. A warranty job shouldn't go down the normal path.",
+    businessQuestions: [
+      'Can the coordination work that follows a completed ServiceM8 job, routing, duplicate protection, and record-keeping, be automated while keeping real business judgment calls, like VIP approval, with a person?',
+    ],
+    method: ['ServiceM8 Webhook', 'API Enrichment', 'Duplicate Check', 'Business Rule Routing', 'Slack Approval', 'Audit Log'],
+    dashboardImages: [
+      { label: 'VIP approval request in Slack, with Approve/Decline buttons', src: jobflowVipApprovalSlack },
+      { label: 'Automation log: meaningful events recorded during a live test run', src: jobflowAuditLog },
+      { label: 'Slack operational notifications: After-Hours and Unsupported Category exceptions', src: jobflowSlackNotifications },
+    ],
+    reflection:
+      "This is a portfolio project built with realistic ServiceM8 and Zapier workflows and test data, not a production deployment, and not an official ServiceM8 integration. Duplicate protection is a lookup before create, not a distributed-transaction guarantee, and near-simultaneous duplicate deliveries weren't tested. Audit logging covers meaningful events (Job Received, VIP Approval, duplicate events), not every branch, because the Zap reached its 30-step trial limit. ServiceM8 API failures, Slack approval timeouts, and malformed webhook payloads weren't tested either.",
+    artifacts: [
+      { label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/job-flow-zapier' },
+      { label: 'View Zap Step Map', url: 'https://github.com/edzarquiza/job-flow-zapier/blob/main/docs/zap-step-map.md' },
+    ],
   },
 ]
