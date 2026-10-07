@@ -6,6 +6,7 @@ import Reveal from '../components/Reveal'
 import Eyebrow from '../components/Eyebrow'
 import { projects, categoryLabels } from '../data/projects'
 import jobflowZapFlow from '../assets/jobflow-zap-flow.png'
+import jobflowArchitecture from '../assets/jobflow-architecture.png'
 
 const decisions = [
   {
@@ -96,11 +97,13 @@ export default function JobFlow() {
           ))}
         </ul>
 
-        {project.heroImage && (
-          <div className="mt-8 overflow-hidden border border-border">
-            <img src={project.heroImage} alt={project.heroImageAlt ?? project.title} className="w-full" />
-          </div>
-        )}
+        <div className="mt-8 overflow-hidden border border-border">
+          <img
+            src={jobflowArchitecture}
+            alt="JobFlow architecture: ServiceM8 webhook through API enrichment, duplicate check, and business-rule routing to billing, Slack approval, or exception handling"
+            className="w-full"
+          />
+        </div>
 
         {project.keyResults && (
           <div className="mt-8">

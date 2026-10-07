@@ -33,7 +33,8 @@ import aureliaProcessingBreakdown from '../assets/aurelia-processing-breakdown.p
 import aureliaOperationsPage from '../assets/aurelia-operations-page.png'
 import aureliaInvoiceControlWorkflow from '../assets/aurelia-invoice-control-workflow.png'
 import aureliaOperationsWorkflow from '../assets/aurelia-operations-workflow.png'
-import jobflowArchitecture from '../assets/jobflow-architecture.png'
+import aureliaThumbnail from '../assets/AureliaAI_Thumbnail.png'
+import jobflowThumbnail from '../assets/JobFlow_Thumbnail.png'
 import jobflowVipApprovalSlack from '../assets/jobflow-vip-approval-slack.png'
 import jobflowAuditLog from '../assets/jobflow-audit-log.png'
 import jobflowSlackNotifications from '../assets/jobflow-slack-notifications.png'
@@ -669,7 +670,8 @@ export const projects: Project[] = [
     oneLiner:
       "Letting an AI model both read an invoice and decide if it's valid means inheriting its uncertainty into a business decision. Built Aurelia AI, where AI only extracts the data. A deterministic backend, checked against real vendor and PO records, makes every pass/fail call.",
     tools: ['React', 'TypeScript', 'n8n', 'Ollama (Qwen 3 4B)', 'PostgreSQL'],
-    heroImage: aureliaInvoiceControlWorkflow,
+    heroImage: aureliaThumbnail,
+    heroImageAlt: 'Aurelia AI: invoice extraction with Ollama, validation against PostgreSQL, and n8n approval rules routing to automatic, human review, or exception',
     keyResults: [
       { value: '8', label: 'Tested Workflow Paths' },
       { value: '3', label: 'Webhook Endpoints' },
@@ -702,8 +704,8 @@ export const projects: Project[] = [
     oneLiner:
       "When a ServiceM8 job is marked complete, what happens next depends on the job: routine work can go straight to billing, but VIP, after-hours, and warranty jobs each need different handling, and webhooks can even fire twice. I built a 30-step Zapier workflow that automates that coordination, enriching each event through the ServiceM8 API, checking for duplicates before writing anything, and keeping a person in the loop for VIP approval in Slack.",
     tools: ['Zapier', 'Webhooks', 'ServiceM8 API', 'REST APIs', 'Slack', 'Zapier Tables'],
-    heroImage: jobflowArchitecture,
-    heroImageAlt: 'JobFlow architecture: ServiceM8 webhook through API enrichment, duplicate check, and business-rule routing to billing, Slack approval, or exception handling',
+    heroImage: jobflowThumbnail,
+    heroImageAlt: 'JobFlow: ServiceM8 to Zapier automation, from webhook and API enrichment through duplicate check to category routing',
     keyResults: [
       { value: '30 / 30', label: 'Zap Steps Used (Trial Limit)' },
       { value: '3', label: 'ServiceM8 API Touchpoints' },
