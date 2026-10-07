@@ -54,6 +54,7 @@ export const skillCategories: SkillCategory[] = [
     items: [
       'UiPath',
       'Power Automate',
+      'Zapier',
       'n8n',
       'Ollama (Local LLMs)',
       'LLM Integration',
