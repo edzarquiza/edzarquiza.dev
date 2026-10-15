@@ -38,6 +38,8 @@ import jobflowThumbnail from '../assets/JobFlow_Thumbnail.png'
 import jobflowVipApprovalSlack from '../assets/jobflow-vip-approval-slack.png'
 import jobflowAuditLog from '../assets/jobflow-audit-log.png'
 import jobflowSlackNotifications from '../assets/jobflow-slack-notifications.png'
+import apigateCiFailed from '../assets/apigate-ci-failed.png'
+import apigateCiPassed from '../assets/apigate-ci-passed.png'
 import veydrinArchitecture from '../assets/veydrin-architecture.png'
 import veydrinIngestionReliability from '../assets/veydrin-ingestion-reliability.png'
 import veydrinMedallionArchitecture from '../assets/veydrin-medallion-architecture.png'
@@ -150,7 +152,7 @@ function buildSlides(modules: Record<string, string>, titles: string[], deckTitl
     }))
 }
 
-export type ProjectCategory = 'engineering' | 'powerbi' | 'case-study' | 'automation'
+export type ProjectCategory = 'engineering' | 'powerbi' | 'case-study' | 'automation' | 'qa'
 
 export type ProjectStatus = 'coming-soon' | 'published'
 
@@ -194,6 +196,7 @@ export const categoryLabels: Record<ProjectCategory, string> = {
   powerbi: 'Power BI & Analytics',
   'case-study': 'Data Analytics Case Study',
   automation: 'Automation & Data',
+  qa: 'QA & Test Automation',
 }
 
 export const projects: Project[] = [
@@ -730,6 +733,41 @@ export const projects: Project[] = [
     artifacts: [
       { label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/job-flow-zapier' },
       { label: 'View Zap Step Map', url: 'https://github.com/edzarquiza/job-flow-zapier/blob/main/docs/zap-step-map.md' },
+    ],
+  },
+  {
+    slug: 'api-gate',
+    title: 'API Gate',
+    category: 'qa',
+    status: 'published',
+    oneLiner:
+      'A sample order API is only the test target here. I built the part around it: a GitHub Actions pipeline that builds the API, starts it, waits for it to be healthy, and runs an automated HTTP test suite against the running process on every pull request and push. If any required step fails, the quality gate fails and diagnostics are uploaded.',
+    tools: ['Vitest', 'TypeScript', 'GitHub Actions', 'Node.js', 'Express', 'Zod'],
+    heroImage: apigateCiFailed,
+    heroImageAlt: 'GitHub Actions run of the API Quality Gate failing at the Run API tests step after an intentional regression',
+    keyResults: [
+      { value: '79', label: 'Automated HTTP Tests' },
+      { value: '5', label: 'API Endpoints Under Test' },
+      { value: '30 s', label: 'Readiness Limit' },
+      { value: '1', label: 'Required Check on main' },
+    ],
+    keyFinding:
+      'The tests run over real HTTP against a separately started API process, and the gate was shown failing on an intentional regression and on a startup crash, then recovering to green.',
+    businessProblem:
+      "A test suite only protects a codebase if it runs every time and its result can't be ignored. I wanted to build that for a small API: tests that exercise the running service the way a real client would, and a CI gate that fails loudly and leaves enough evidence to find out why.",
+    businessQuestions: [
+      'Can an API be tested automatically over real HTTP in CI, with a gate that cannot quietly pass when something is broken?',
+    ],
+    method: ['Install', 'Typecheck & Build', 'Start API', 'Wait for /health', 'Run HTTP Tests', 'Upload Diagnostics'],
+    dashboardImages: [
+      { label: 'Failing gate: an intentional regression (create returns 200 instead of 201) fails the Run API tests step', src: apigateCiFailed },
+      { label: 'Passing gate: the final run on main, all 79 tests passed', src: apigateCiPassed },
+    ],
+    reflection:
+      "This is a portfolio project. The order data lives in memory and resets on restart, and there is no database or authentication. No deployment job exists, so the idea that a failed gate prevents a deployment is not built or demonstrated. The repository ruleset lists the gate as a required check on main, but I did not test that GitHub actually refuses to merge a red pull request. The readiness timeout, cancelled runs, graceful shutdown on Linux and manual workflow runs were also not tested on GitHub.",
+    artifacts: [
+      { label: 'View Source on GitHub', url: 'https://github.com/edzarquiza/api-gate-automated-testing' },
+      { label: 'View CI Workflow', url: 'https://github.com/edzarquiza/api-gate-automated-testing/blob/main/.github/workflows/ci.yml' },
     ],
   },
 ]

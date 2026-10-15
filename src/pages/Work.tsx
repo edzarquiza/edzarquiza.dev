@@ -9,6 +9,7 @@ const filters: { label: string; value: ProjectCategory | 'all' }[] = [
   { label: categoryLabels['case-study'], value: 'case-study' },
   { label: categoryLabels.automation, value: 'automation' },
   { label: categoryLabels.engineering, value: 'engineering' },
+  { label: categoryLabels.qa, value: 'qa' },
 ]
 
 export default function Work() {
