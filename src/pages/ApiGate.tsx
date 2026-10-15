@@ -72,7 +72,7 @@ export default function ApiGate() {
       <PageHeader
         eyebrow={categoryLabels[project.category]}
         title={project.title}
-        description="Automated API Testing & CI Quality Gate"
+        description="Tests that run over real HTTP, and a CI gate that can't quietly pass."
         backTo="/work"
         backLabel="Back to Projects"
       >

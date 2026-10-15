@@ -737,7 +737,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'api-gate',
-    title: 'API Gate',
+    title: 'API Gate: Automated API Testing & CI Quality Gate',
     category: 'qa',
     status: 'published',
     oneLiner:
