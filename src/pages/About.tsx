@@ -27,7 +27,8 @@ export default function About() {
               I'm {siteConfig.name}, an automation and IT lead based in {siteConfig.location}. Over the past 11
               years I've worked across IT support, full-stack software development, and RPA delivery for a
               Japanese manufacturing company and, more recently, a remote-first Australian technology company,
-              most recently as Senior Automation Developer / IT Lead.
+              where I was Senior Automation Developer / IT Lead. I now also work part time as an AI Automation
+              Engineer for a US company.
             </p>
             <p>
               My career didn't start in data analytics, and I don't present it that way. It started in IT support,
@@ -74,7 +75,7 @@ export default function About() {
             <div>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.06em] text-teal-text">Based In</p>
               <p className="mt-2 font-serif text-sm leading-relaxed text-charcoal/80">
-                {siteConfig.location}, working remotely with distributed teams, most recently across Australia.
+                {siteConfig.location}, working remotely with distributed teams across Australia and the United States.
               </p>
             </div>
           </div>

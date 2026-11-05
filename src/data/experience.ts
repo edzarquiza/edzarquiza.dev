@@ -10,6 +10,20 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
+    role: 'AI Automation Engineer',
+    company: 'Idegy',
+    location: 'Columbus, OH, United States (Remote)',
+    start: '11/2026',
+    end: 'Present',
+    type: 'Part time',
+    highlights: [
+      'Develop and maintain AI-powered automation solutions to streamline business processes, reduce repetitive manual work, and improve operational efficiency',
+      'Design and implement automated workflows using AI tools, APIs, and business applications, focusing on practical solutions that address operational requirements',
+      'Collaborate with stakeholders to understand business processes, identify automation opportunities, and translate requirements into reliable technical solutions',
+      'Apply software development, automation, and AI-assisted engineering practices to build, test, troubleshoot, and continuously improve business workflows',
+    ],
+  },
+  {
     role: 'Senior Automation Developer / IT Lead',
     company: 'Dexterous Group Pty Limited',
     location: 'New South Wales, Australia (Remote)',
@@ -17,7 +31,7 @@ export const experience: ExperienceEntry[] = [
     end: '04/2026',
     type: 'Full time',
     highlights: [
-      'Led a 4-person automation and IT operations team, owning delivery of DexIQ, an external automation and AI product, from requirements through production release',
+      'Led a 4-person automation and IT operations team, owning parts of delivery and project management of DexIQ, an external AP automation and AI platform, from requirements through production release',
       'Also served as temporary Product Lead for DexIQ, running scrum ceremonies, triaging the weekly ticket queue, and continuing the product roadmap',
       'Established production-readiness standards covering testing, documentation, security, scalability, and reliability, reducing post-release defects',
       'Served as escalation point for technical and delivery risk across engineering, operations, and business stakeholders',
